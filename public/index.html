@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Vidhya</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Vidhya</title>
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+
+  <style>
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      border: 5px solid #ffcb30;
+    }
+
+    
+
+    .container {
+      padding: 10px;
+    }
+
+    .footer {
+      background: #ffcb30;
+      padding: 5px 5px;
+      font-family: 'Play', sans-serif;
+      text-align: center;
+      border-top: 5px solid #8d00ce;
+    }
+
+    .footer .row {
+      width: 100%;
+      margin: 1% 0%;
+      padding: 0.6% 0%;
+      color: #ffffff;
+      font-size: 0.8em;
+    }
+
+    .footer .row a {
+      text-decoration: none;
+      color: #000000;
+      transition: 0.5s;
+    }
+
+    .footer .row a:hover {
+      color: #ae00ff;
+    }
+
+    .footer .row ul {
+      width: 100%;
+    }
+
+    .footer .row ul li {
+      display: inline-block;
+      margin: 0px 30px;
+    }
+
+    .footer .row a i {
+      font-size: 2em;
+      margin: 0% 1%;
+    }
+
+    @media (max-width: 720px) {
+      .footer {
+        text-align: left;
+        padding: 5%;
+      }
+
+      .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+      }
+
+      .footer .row a i {
+        margin: 0% 3%;
+      }
+    }
+
+    /* Ensure main content takes up remaining space */
+    #content {
+      min-height: calc(100vh - 100vh); /* Adjust based on footer height */
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <!-- Your React App Root Div -->
+    <div id="root"></div>
+  </div>
+  
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer">
+      <div class="row" style="margin-top: -0%; margin-bottom: -1%">
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+      </div>
+
+      <div class="row">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="row" style="margin-bottom: -0.5%; margin-top: -1%">
+        VIRTUAL VIDHYA Copyright © 2024 Mosako Industries - All rights reserved || Designed By: Mosako
+      </div>
+    </div>
+  </footer>
+
+  <!-- Your React Application Scripts -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

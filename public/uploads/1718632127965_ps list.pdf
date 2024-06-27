@@ -1,0 +1,4737 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 6598
+>>
+stream
+0.200025 w
+0 G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+10. 816.8899999999999864 Td
+(Project 1: FactGuard: Leveraging Large Language Models for Video Content Factual Verification) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 796.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 783.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 796.8899999999999864 459.9799999999672195 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 783.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 775.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 761.8899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 775.3899999999999864 459.9799999999672195 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 761.8899999999999864 Td
+(FactGuard: Leveraging Large Language Models for Video Content Factual Verification) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 742.3899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 728.8899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 742.3899999999999864 459.9799999999672195 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 728.8899999999999864 Td
+(Generative AI) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 720.8899999999999864 55.3000000000000043 -90.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 707.3899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 720.8899999999999864 459.9799999999672195 -90.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 707.3899999999999864 Td
+(This project aims to develop a content verification system leveraging Large Language Models \(LLMs\)) Tj
+T* (to enhance the quality and reliability of video content, particularly on online platforms like YouTube.) Tj
+T* (The system will employ Automatic Speech Recognition \(ASR\) technology to transcribe video content) Tj
+T* (into text, which will then be compared against existing web pages for accuracy assessment. LLMs,) Tj
+T* (specifically GPT models, will be utilized for semantic understanding and fine-grained analysis of the) Tj
+T* (textual content, enabling the detection of inaccuracies or discrepancies. ) Tj
+T* (Refer - Youtube, Wikipedia) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 630.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 616.8899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 630.3899999999999864 459.9799999999672195 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 616.8899999999999864 Td
+(LLM, MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 597.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 583.8899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 597.3899999999999864 459.9799999999672195 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 583.8899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 439.3899999999999864 Td
+(Project 2: Mental-LLM: Predicting Mental Health from Online Text with LLM) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 419.3899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 405.8899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 419.3899999999999864 459.9799999999978581 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 405.8899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 397.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 384.3899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 397.8899999999999864 459.9799999999978581 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 384.3899999999999864 Td
+(Mental-LLM: Predicting Mental Health from Online Text with LLM) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 364.8899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 351.3899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 364.8899999999999864 459.9799999999978581 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 351.3899999999999864 Td
+(Generative AI) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 343.3899999999999864 55.3000000000000043 -159.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 329.8899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 343.3899999999999864 459.9799999999978581 -159.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 329.8899999999999864 Td
+(Mental-LLM presents a novel methodology for leveraging Large Language Models \(LLMs\) in mental) Tj
+T* (health prediction tasks using given data. This research explores the effectiveness of advanced) Tj
+T* (language models in analyzing online textual content to predict mental health conditions. Furthermore,) Tj
+T* (this study conducts a comparative analysis of multiple LLMs, including Alpaca, Alpaca-LoRA,) Tj
+T* (FLAN-T5, to determine the optimal model for mental health prediction. This research contributes to) Tj
+T* (advancing mental health assessment methodologies by providing insights into the capabilities of LLMs) Tj
+T* (and guiding the selection of the most suitable model for mental health prediction tasks.) Tj
+T* () Tj
+T* (Reflinks: ) Tj
+T* (https://github.com/neuhai/Mental-LLM  ) Tj
+T* (https://arxiv.org/abs/2307.14385) Tj
+T* (Student Mental health -  https://www.kaggle.com/datasets/mariaren/covid19-healthy-diet-dataset      ) Tj
+T* ( Fetal Health Classification  - https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 183.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 170.3899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 183.8899999999999864 459.9799999999978581 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 170.3899999999999864 Td
+(LLM, MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 150.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 137.3899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 150.8899999999999864 459.9799999999978581 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 137.3899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 7218
+>>
+stream
+0.200025 w
+0. G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 816.8899999999999864 Td
+(Project 3: Automated Vehicle Damage Assessment : Advancements in Visual-Language Models) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 796.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 783.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 796.8899999999999864 459.9799999999619331 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 783.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 775.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 761.8899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 775.3899999999999864 459.9799999999619331 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 761.8899999999999864 Td
+(Automated Vehicle Damage Assessment : Advancements in Visual-Language Models) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 742.3899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 728.8899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 742.3899999999999864 459.9799999999619331 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 728.8899999999999864 Td
+(Generative AI) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 720.8899999999999864 55.3000000000000043 -90.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 707.3899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 720.8899999999999864 459.9799999999619331 -90.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 707.3899999999999864 Td
+(Proposed a novel approach leveraging the Contrastive Language-Image Pretraining \(CLIP\) model / for) Tj
+T* (automated vehicle damage assessment. CLIP, developed by OpenAI, is a powerful visual-language) Tj
+T* (model capable of understanding the relationship between images and text through contrastive) Tj
+T* (learning. We fine-tune the CLIP model on a curated dataset comprising images of damaged vehicles) Tj
+T* (paired with corresponding textual descriptions of the damage. The fine-tuned CLIP model learns to) Tj
+T* (generate descriptive reports for vehicle damage solely based on input images, enabling automated) Tj
+T* (assessment without manual intervention.) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 630.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 616.8899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 630.3899999999999864 459.9799999999619331 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 616.8899999999999864 Td
+(VLM, MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 597.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 583.8899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 597.3899999999999864 459.9799999999619331 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 583.8899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 439.3899999999999864 Td
+(Project 4: Intellijobs:Automating Job Portal Scraping and Analysis with Large Language Models) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 419.3899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 405.8899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 419.3899999999999864 459.9799999999756324 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 405.8899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 397.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 384.3899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 397.8899999999999864 459.9799999999756324 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 384.3899999999999864 Td
+(Intellijobs:Automating Job Portal Scraping and Analysis with Large Language Models) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 364.8899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 351.3899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 364.8899999999999864 459.9799999999756324 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 351.3899999999999864 Td
+(Generative AI) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 343.3899999999999864 55.3000000000000043 -286. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 329.8899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 343.3899999999999864 459.9799999999756324 -286. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 329.8899999999999864 Td
+(The aim of this project is to develop a system that automates the process of scraping job listings from) Tj
+T* (a selected job portal and analyzing them using Large Language Models \(LLMs\) to provide valuable) Tj
+T* (insights to job seekers and employers. The system will leverage web scraping techniques to collect) Tj
+T* (job listings \(like data analyst\) and natural language processing capabilities of LLMs to analyze job) Tj
+T* (descriptions like highest salary, job title, location, company ratings, company_size,employment_type) Tj
+T* (and to extract anyother key information.) Tj
+T* () Tj
+T* (Choose a Job Portal: Select a job portal that you'll be scraping for job listings. Popular choices might) Tj
+T* (include Indeed, LinkedIn, Glassdoor, or specific industry-focused job boards.) Tj
+T* (Web Scraping: Develop a web scraping script using libraries like BeautifulSoup \(for HTML parsing\) or) Tj
+T* (Scrapy \(for more advanced web scraping tasks\) in Python. This script will fetch job listings from the) Tj
+T* (selected portal, extracting relevant information such as job title, company, location, job description,) Tj
+T* (requirements, and any other details deemed important.) Tj
+T* (Data Cleaning and Preprocessing: Clean and preprocess the scraped data to remove noise,) Tj
+T* (standardize text formats, handle missing values, and perform any necessary transformations. The) Tj
+T* (data obtained from the data cleaning should be stored in required format.) Tj
+T* (Train a custom LLM using the preprocessed  job description data. You can use frameworks like) Tj
+T* (Hugging Face's Transformers or OpenAI's GPT \(if you have access\) for training. Fine-tune a) Tj
+T* (pre-trained LLM \(e.g., GPT-2, BERT\) on your job description dataset using transfer learning) Tj
+T* (techniques.) Tj
+T* (User Interface \(UI\):) Tj
+T* (Develop a user-friendly interface where users can input their criteria \(e.g., location, job title, skills\) and) Tj
+T* (receive relevant insights.) Tj
+T* ( ) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 57.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 43.8899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 57.3899999999999864 459.9799999999756324 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 43.8899999999999864 Td
+(LLM,MERN) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.78 G
+0. w
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 3349
+>>
+stream
+0. w
+0.78 G
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 831.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 818.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 831.8899999999999864 459.9799999999756324 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 818.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 810.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 796.8899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 810.3899999999999864 459.9799999999756324 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 796.8899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 274.8899999999999864 Td
+(Project 5: Chat bot for Medical Queries) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 254.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 241.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 254.8899999999999864 459.9799999999676174 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 241.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 233.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 219.8899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 233.3899999999999864 459.9799999999676174 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 219.8899999999999864 Td
+(Chat bot for Medical Queries) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 200.3899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 186.8899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 200.3899999999999864 459.9799999999676174 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 186.8899999999999864 Td
+(Generative AI) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 178.8899999999999864 55.3000000000000043 -159.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 165.3899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 178.8899999999999864 459.9799999999676174 -159.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 165.3899999999999864 Td
+(LLMs have numerous applications in healthcare domain. In scenarios where) Tj
+T* (doctors may not be easily available, Gen AI models will be useful for addressing) Tj
+T* (patient queries, at least for non-critical diseases. A pre-trained LLM model is a) Tj
+T* (good candidate for developing a Medical Chat Doctor. It should be able to answer) Tj
+T* (patient queries. To provide relevant answers and improve the quality of diagnosis,) Tj
+T* (the model should be fine tuned with custom data. Choose an appropriate model like \(Mistral-7B\) and) Tj
+T* (search for training data set for fine tuning the model.) Tj
+T* (The patient should be able input problems/symptoms he/she is facing and ask) Tj
+T* (related questions. ) Tj
+T* (An appropriate response should be given by the Chat-bot in a couple of sentences.) Tj
+T* () Tj
+T* (https://huggingface.co/datasets/lavita/ChatDoctor-HealthCareMagic-100K) Tj
+T* () Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.78 G
+0. w
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 2575
+>>
+stream
+0. w
+0.78 G
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 831.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 818.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 831.8899999999999864 459.9799999999676174 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 818.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 810.3899999999999864 55.3000000000000043 -251.5 re
+B
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 810.3899999999999864 459.9799999999676174 -251.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 796.8899999999999864 Td
+(Acquire Dataset:) Tj
+T* (Obtain a dataset containing medical questions, symptoms, diagnoses, treatments, and related) Tj
+T* (information. Consider using publicly available datasets, healthcare forums, or electronic health records) Tj
+T* (\(EHR\) with appropriate permissions.) Tj
+T* () Tj
+T* (Preprocess Data:) Tj
+T* (Clean and preprocess the medical dataset to remove noise, standardize text formats, handle) Tj
+T* (abbreviations, and perform any necessary transformations. Ensure that the dataset is suitable for) Tj
+T* (fine-tuning the pre-trained model.) Tj
+T* () Tj
+T* (Fine-tune Model:) Tj
+T* () Tj
+T* (Fine-tune with LLM like Mistral-7B with the preprocessed medical dataset. Utilize transfer learning) Tj
+T* (techniques to update the model's parameters based on the medical data, adapting it to the task of) Tj
+T* (answering patient queries and providing relevant medical information.) Tj
+T* () Tj
+T* (Develop User Interface:) Tj
+T* (Design and develop a user-friendly interface for the Medical Chat Doctor application. Allow patients to) Tj
+T* (input their symptoms, ask related questions, and receive appropriate responses from the chatbot.) Tj
+T* () Tj
+T* () Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 558.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 545.3899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 558.8899999999999864 459.9799999999676174 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 545.3899999999999864 Td
+(LLM,MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 525.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 512.3899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 525.8899999999999864 459.9799999999676174 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 512.3899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+endstream
+endobj
+11 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 12 0 R
+>>
+endobj
+12 0 obj
+<<
+/Length 6484
+>>
+stream
+0.200025 w
+0. G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 816.8899999999999864 Td
+(Project 6: Chat with Author) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 796.8899999999999864 71.3164335664336164 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 783.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+111.3164335664336164 796.8899999999999864 443.9635664335663705 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+116.3164335664336164 783.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 775.3899999999999864 71.3164335664336164 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 761.8899999999999864 Td
+(Project Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+111.3164335664336164 775.3899999999999864 443.9635664335663705 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+116.3164335664336164 761.8899999999999864 Td
+(Chat with Author) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 753.8899999999999864 71.3164335664336164 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 740.3899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+111.3164335664336164 753.8899999999999864 443.9635664335663705 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+116.3164335664336164 740.3899999999999864 Td
+(Generative AI) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 732.3899999999999864 71.3164335664336164 -274.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 718.8899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+111.3164335664336164 732.3899999999999864 443.9635664335663705 -274.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+116.3164335664336164 718.8899999999999864 Td
+(An Agent Helps to Automate chat with Author while Providing the Query provides accuracy results.) Tj
+T* () Tj
+T* () Tj
+T* (we'll create an application that enables you to ask questions about Selected Authors) Tj
+T* (Textbook\(PDFs\) and receive accurate answers.) Tj
+T* () Tj
+T* (Train GPT on PDF documents and fine-tune it to your specific use case. ) Tj
+T* () Tj
+T* (Experience the seamless user interface as you upload PDFs, ask questions, ) Tj
+T* (and receive prompt answers from the LLM.) Tj
+T* () Tj
+T* (Prerequisites: \(an open-source Python,Javascript, Flask framework, Basics on OpenAI\)) Tj
+T* (Discover Langchain's capabilities in training GPT models on your data and generating) Tj
+T* (personalized LLMs. ) Tj
+T* () Tj
+T* (Explore text embeddings and their integration with Langchain using OpenAI's API.) Tj
+T* (Automate tasks and improve efficiency using Langchain with Streamlit.) Tj
+T* (Outcome: You'II get Q&A on given topic) Tj
+T* (You'll learn how to use LangChain \(a framework that makes it easier to assemble the components) Tj
+T* (to build a chatbot\) &) Tj
+T* (Pinecone - a 'vectorstore' to store your documents in number 'vectors'. ) Tj
+T* (You'll also learn how to create a frontend chat interface to display the results alongside source) Tj
+T* (document) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 457.8899999999999864 71.3164335664336164 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 444.3899999999999864 Td
+(Tech Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+111.3164335664336164 457.8899999999999864 443.9635664335663705 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+116.3164335664336164 444.3899999999999864 Td
+( LLM,MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 436.3899999999999864 71.3164335664336164 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 422.8899999999999864 Td
+(Max Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+111.3164335664336164 436.3899999999999864 443.9635664335663705 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+116.3164335664336164 422.8899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 289.8899999999999864 Td
+(Project 7: Retail LLM) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 269.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 256.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 269.8899999999999864 459.9799999999627289 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 256.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 248.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 234.8899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 248.3899999999999864 459.9799999999627289 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 234.8899999999999864 Td
+(Retail LLM) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 215.3899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 201.8899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 215.3899999999999864 459.9799999999627289 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 201.8899999999999864 Td
+(Generative AI) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 193.8899999999999864 55.3000000000000043 -182.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 180.3899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 193.8899999999999864 459.9799999999627289 -182.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 180.3899999999999864 Td
+("leveraging LLM technology in retail operations can lead to a more seamless and personalized) Tj
+T* (shopping experience for customers, empower salespersons with actionable insights, and provide mart) Tj
+T* (owners with valuable tools for financial analysis and decision-making across their branches 1.) Tj
+T* (Customer Experience Enhancement) Tj
+T* (Improved Search Capabilities: LLM-powered search functionalities can understand natural language) Tj
+T* (queries, enabling customers to find products more intuitively and efficiently.) Tj
+T* (Personalized Product Recommendations: By analyzing customer browsing and purchasing history,) Tj
+T* (LLMs can provide tailored product recommendations, enhancing the likelihood of conversion and) Tj
+T* (customer satisfaction.) Tj
+T* (2. Salesperson Support) Tj
+T* (Product Availability and Sales Trends: LLMs can analyze sales data across various branches or) Tj
+T* (locations in real-time, providing insights into product availability and identifying trends where certain) Tj
+T* (products may be underperforming. Salespersons can leverage this information to adjust their sales) Tj
+T* (strategies accordingly.) Tj
+T* (Sales Performance Analysis: LLMs can analyze sales data to identify patterns and factors influencing) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.78 G
+0. w
+endstream
+endobj
+13 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 14 0 R
+>>
+endobj
+14 0 obj
+<<
+/Length 2000
+>>
+stream
+0. w
+0.78 G
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 831.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 818.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 831.8899999999999864 459.9799999999627289 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 818.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 810.3899999999999864 55.3000000000000043 -90.5 re
+B
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 810.3899999999999864 459.9799999999627289 -90.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 796.8899999999999864 Td
+(the progression of certain product sales. This analysis can help salespersons understand customer) Tj
+T* (preferences and adjust their approach to promote these products effectively.) Tj
+T* (3. Financial Analysis for Mart Owners) Tj
+T* (Branch Performance Summary: LLMs can consolidate data from multiple branches to provide mart) Tj
+T* (owners with a comprehensive summary of financial performance. This includes metrics such as sales) Tj
+T* (revenue, profit margins, and inventory turnover rates, allowing owners to identify areas for) Tj
+T* (improvement and make informed business decisions.") Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 719.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 706.3899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 719.8899999999999864 459.9799999999627289 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 706.3899999999999864 Td
+(LLM,MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 686.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 673.3899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 686.8899999999999864 459.9799999999627289 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 673.3899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+endstream
+endobj
+15 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 16 0 R
+>>
+endobj
+16 0 obj
+<<
+/Length 6027
+>>
+stream
+0.200025 w
+0. G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 816.8899999999999864 Td
+(Project 8: Cricket LLM) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 796.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 783.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 796.8899999999999864 459.980000000005532 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 783.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 775.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 761.8899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 775.3899999999999864 459.980000000005532 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 761.8899999999999864 Td
+(Cricket LLM) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 742.3899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 728.8899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 742.3899999999999864 459.980000000005532 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 728.8899999999999864 Td
+(Generative AI) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 720.8899999999999864 55.3000000000000043 -343.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 707.3899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 720.8899999999999864 459.980000000005532 -343.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 707.3899999999999864 Td
+(Cricket is played in various formats. A specialized Cricket Large Language Model \(LLM\) can be used) Tj
+T* (for match summaries and reports, player profiling and analysis, cricket news aggregation, historical) Tj
+T* (data analysis and many more such acivities.) Tj
+T* () Tj
+T* (The aim of this project is to create a Cricket LLM. It would be built - primarily - using web scraping.) Tj
+T* () Tj
+T* (Here's a general outline of how you could approach building such a system:) Tj
+T* () Tj
+T* (Define Requirements:) Tj
+T* (Determine the specific data that would be scraped.) Tj
+T* (Choose the websites to scrape this data from.) Tj
+T* () Tj
+T* (Tool for scraping:) Tj
+T* (Scrapy would be used for this purpose. Where needed, necessary code in Python would be) Tj
+T* (developed. Automated scraping scripts would be setup to fetch data at regular intervals for live) Tj
+T* (updates.) Tj
+T* () Tj
+T* (Data Processing and Storage:) Tj
+T* (The scraped data would be processed to extract relevant information and clean it where necessary.) Tj
+T* (It would be put in a structured format \(e.g., CSV file\) for easy processing.) Tj
+T* () Tj
+T* (Fine-tuning of the LLM would be done using the above processed data.) Tj
+T* () Tj
+T* (Build the User Interface:) Tj
+T* (A UI would be developed where users can view live cricket data. This could be a web application,) Tj
+T* (desktop application, mobile app or chatbot, enabling display of live scores, player statistics, match) Tj
+T* (events, and other information of interest in a user-friendly manner.) Tj
+T* () Tj
+T* (This UI would be tested to ensure a stable user experience.) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 377.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 363.8899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 377.3899999999999864 459.980000000005532 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 363.8899999999999864 Td
+(LLM,MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 344.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 330.8899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 344.3899999999999864 459.980000000005532 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 330.8899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 186.3899999999999864 Td
+(Project 9: LLM-driven Insurance advisor) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 166.3899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 152.8899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 166.3899999999999864 459.9799999999846705 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 152.8899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 144.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 131.3899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 144.8899999999999864 459.9799999999846705 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 131.3899999999999864 Td
+(LLM-driven Insurance advisor) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 111.8899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 98.3899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 111.8899999999999864 459.9799999999846705 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 98.3899999999999864 Td
+(Generative AI) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 90.3899999999999864 55.3000000000000043 -79. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 76.8899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 90.3899999999999864 459.9799999999846705 -79. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 76.8899999999999864 Td
+(The aim of this project is to develop a LLM-based system that provides personalized) Tj
+T* (recommendations, information, and guidance to users seeking insurance-related assistance.) Tj
+T* () Tj
+T* (Leveraging the power of web scraping, this system gathers real-time data from various) Tj
+T* (insurance-related websites, extracting relevant information such as policy details, coverage options) Tj
+T* (and premiums from a selected insurance portal.) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.78 G
+0. w
+endstream
+endobj
+17 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 18 0 R
+>>
+endobj
+18 0 obj
+<<
+/Length 2295
+>>
+stream
+0. w
+0.78 G
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 831.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 818.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 831.8899999999999864 459.9799999999846705 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 818.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 810.3899999999999864 55.3000000000000043 -159.5 re
+B
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 810.3899999999999864 459.9799999999846705 -159.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 796.8899999999999864 Td
+() Tj
+T* (Here are the likely steps involved:) Tj
+T* (1. Choose a specific insurance website as the primary source for scraping insurance-related) Tj
+T* (information. \(For example PolicyBazaar.com\)) Tj
+T* (2. Develop a web scraping script using tools like BeautifulSoup or Scrapy to fetch the necessary) Tj
+T* (details.) Tj
+T* (3. Clean and preprocess the scraped data to remove noise, standardize text formats, handle missing) Tj
+T* (values, and perform any necessary transformations. It would also be stored in required format; for) Tj
+T* (example a CSV file.) Tj
+T* (4. Fine-tune a LLM using the above data.) Tj
+T* (5. Develop an interface \(preferably chatbot\) for users to interact with the LLM. The interface should be) Tj
+T* (user friendly and help user input their criteria and receive relevant insights.) Tj
+T* (6. The application must be tested to ensure its stable operation.) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 650.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 637.3899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 650.8899999999999864 459.9799999999846705 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 637.3899999999999864 Td
+(LLM,MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 617.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 604.3899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 617.8899999999999864 459.9799999999846705 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 604.3899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+endstream
+endobj
+19 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 20 0 R
+>>
+endobj
+20 0 obj
+<<
+/Length 5165
+>>
+stream
+0.200025 w
+0. G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 816.8899999999999864 Td
+(Project 10: Virtual Legal Assistant using LLM) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 796.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 783.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 796.8899999999999864 459.9799999999794409 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 783.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 775.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 761.8899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 775.3899999999999864 459.9799999999794409 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 761.8899999999999864 Td
+(Virtual Legal Assistant using LLM) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 742.3899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 728.8899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 742.3899999999999864 459.9799999999794409 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 728.8899999999999864 Td
+(Generative AI) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 720.8899999999999864 55.3000000000000043 -470. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 707.3899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 720.8899999999999864 459.9799999999794409 -470. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 707.3899999999999864 Td
+(Creating a Virtual Legal Assistant \(VLA\) using a Language Model \(LM\) like BERT involves several) Tj
+T* (steps. Below are the steps to create a chatbot where users can input legal queries related to sections,) Tj
+T* (persons involved in cases, or specific legal terms, and receive relevant case information along with the) Tj
+T* (option to download case-related documents:) Tj
+T* (1.Learn about BERT) Tj
+T* (2.Data Collection:) Tj
+T* (Gather legal documents, case law databases, court records, and other relevant sources of legal) Tj
+T* (information.) Tj
+T* (3.Preprocess:Organize and preprocess the data to extract case summaries, court decisions, and) Tj
+T* (relevant metadata \(e.g., case names, sections, persons involved\).) Tj
+T* (4.Model Training:) Tj
+T* (Fine-tune a pre-trained Language Model \(LM\) like BERT on the legal dataset. ) Tj
+T* (This involves training the LM to understand legal language and context.) Tj
+T* (Train the model to classify and extract relevant information from user queries, such as identifying) Tj
+T* (sections, names of persons involved, or legal terms like murder, kidnapping, etc.) Tj
+T* (5.Development of Chat Interface:) Tj
+T* (Develop a chatbot interface where users can input their legal queries.) Tj
+T* (Implement natural language processing \(NLP\) techniques to analyze and understand user queries,) Tj
+T* (including named entity recognition \(NER\) for identifying legal terms and entities.) Tj
+T* (6.Query Processing:) Tj
+T* (Process user queries to extract relevant keywords, sections, and names of persons involved.) Tj
+T* (Utilize the trained LM to search the legal database for cases related to the extracted keywords and) Tj
+T* (entities.) Tj
+T* (7.Case Retrieval:) Tj
+T* (Retrieve relevant case summaries or court decisions based on the user's query.) Tj
+T* (Provide options for users to browse or filter the search results based on specific criteria \(e.g., case) Tj
+T* (type, jurisdiction, date\).) Tj
+T* (8.Document Retrieval:) Tj
+T* (Enable users to download case-related documents, such as court judgments, rulings, or case reports.) Tj
+T* (Ensure proper permissions and access controls are implemented to manage document retrieval) Tj
+T* (securely.) Tj
+T* (9.User Interaction and Feedback:) Tj
+T* (Implement features for user interaction, such as asking follow-up questions, clarifying queries, or) Tj
+T* (providing additional information.) Tj
+T* (Gather user feedback to continuously improve the chatbot's performance and user experience.) Tj
+T* (10.Testing and Evaluation:) Tj
+T* (Test the chatbot extensively to ensure it accurately understands user queries and retrieves relevant) Tj
+T* (case information.) Tj
+T* (Evaluate the chatbot's performance using metrics such as precision, recall, and user satisfaction.) Tj
+T* () Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 250.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 237.3899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 250.8899999999999864 459.9799999999794409 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 237.3899999999999864 Td
+(LLM, MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 217.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 204.3899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 217.8899999999999864 459.9799999999794409 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 204.3899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+endstream
+endobj
+21 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 22 0 R
+>>
+endobj
+22 0 obj
+<<
+/Length 7008
+>>
+stream
+0.200025 w
+0. G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 816.8899999999999864 Td
+(Project 11: Saanjh Sahayak) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 796.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 783.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 796.8899999999999864 459.9799999999964939 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 783.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 775.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 761.8899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 775.3899999999999864 459.9799999999964939 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 761.8899999999999864 Td
+(Saanjh Sahayak) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 742.3899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 728.8899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 742.3899999999999864 459.9799999999964939 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 728.8899999999999864 Td
+(Generative AI) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 720.8899999999999864 55.3000000000000043 -251.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 707.3899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 720.8899999999999864 459.9799999999964939 -251.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 707.3899999999999864 Td
+(Saanjh is the home for the elderly. The home needs help in tracking health records of the elderly and) Tj
+T* (predicting any risk for diseases. Create an application that helps the Home to perform a clinical) Tj
+T* (decision support system and disease risk prediction using an existing LLM model.This application) Tj
+T* (should help doctor to give proper treatment .                                                                                           ) Tj
+T* (                                                                                                                                       1.Understand) Tj
+T* (the architecture and capabilities of BERT-based Language Models \(LLMs\) in natural language) Tj
+T* (processing tasks.) Tj
+T* (2.Gather health records of the elderly residents, including medical history, vital signs, lab results,) Tj
+T* (medication history, etc.) Tj
+T* (3.Preprocess the available datasets.) Tj
+T* (4.Fine-tune LLM with cleaned data using Multi-Task Learning approach.) Tj
+T* (5.Verify the fine-tuning process for its quality at each step) Tj
+T* (6.Design and develop an application interface for doctors and healthcare professionals to input and) Tj
+T* (access health records of elderly residents.) Tj
+T* (7.Integrate the fine-tuned LLM model into the application framework for disease risk prediction and) Tj
+T* (clinical decision support.) Tj
+T* (8.Test the application against evaluation metrics:in terms of accuracy, precision, recall, F1-score, and) Tj
+T* (other relevant metrics.) Tj
+T* (9.Analyze the application's performance in predicting disease risks and providing decision support to) Tj
+T* (doctors.) Tj
+T* (10.Repeat steps to attain better performance) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 469.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 455.8899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 469.3899999999999864 459.9799999999964939 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 455.8899999999999864 Td
+(LLM, MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 436.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 422.8899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 436.3899999999999864 459.9799999999964939 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 422.8899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 278.3899999999999864 Td
+(Project 12: Auto-summarization of given text book / Chapter) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 258.3899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 244.8899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 258.3899999999999864 459.9800000000139448 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 244.8899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 236.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 223.3899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 236.8899999999999864 459.9800000000139448 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 223.3899999999999864 Td
+(Auto-summarization of given text book / Chapter) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 203.8899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 190.3899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 203.8899999999999864 459.9800000000139448 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 190.3899999999999864 Td
+(Generative AI / General) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 182.3899999999999864 55.3000000000000043 -136.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 168.8899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 182.3899999999999864 459.9800000000139448 -136.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 168.8899999999999864 Td
+(This project aims to summarize and prepare questions and answers for the given text/pdf. The input) Tj
+T* (may be an article or textbook or a topic. It displays the summarized content on the screen if possible) Tj
+T* (otherwise, the output will be stored into the selected location and format in local file system or cloud.) Tj
+T* (This project also include a UI to retrieve the generated summary and Q&A for the given topic or text.) Tj
+T* (User allowed to level of summarization in 3 levels \(Abstract/Summary/article\). UI provide the) Tj
+T* (environment to accept plain text / upload a text or pdf document. UI displays the result on the screen) Tj
+T* (based on the level of summarization. This application is to be built on Spark cluster to make it) Tj
+T* (scalable. ) Tj
+T* () Tj
+T* (refer - Empowering NLP with Spark NLP and T5 Model: Text Summarization and Question Answering) Tj
+T* (- John Snow Labs) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 45.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 32.3899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 45.8899999999999864 459.9800000000139448 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 32.3899999999999864 Td
+(LLM,MERN, APACHE SAPRK) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.78 G
+0. w
+endstream
+endobj
+23 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 24 0 R
+>>
+endobj
+24 0 obj
+<<
+/Length 2196
+>>
+stream
+0. w
+0.78 G
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 831.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 818.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 831.8899999999999864 459.9800000000139448 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 818.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 810.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 796.8899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 810.3899999999999864 459.9800000000139448 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 796.8899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 113.8899999999999864 Td
+(Project 13: LLM Based Sophisticated User Interface for retrieving data from a dataset / database) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 93.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 80.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 93.8899999999999864 459.9799999999974034 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 80.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 72.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 58.8899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 72.3899999999999864 459.9799999999974034 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 58.8899999999999864 Td
+(LLM Based Sophisticated User Interface for retrieving data from a dataset / database) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 39.3899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 25.8899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 39.3899999999999864 459.9799999999974034 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 25.8899999999999864 Td
+(Generative AI) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.78 G
+0. w
+endstream
+endobj
+25 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 26 0 R
+>>
+endobj
+26 0 obj
+<<
+/Length 2445
+>>
+stream
+0. w
+0.78 G
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 831.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 818.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 831.8899999999999864 459.9799999999974034 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 818.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 810.3899999999999864 55.3000000000000043 -159.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 796.8899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 810.3899999999999864 459.9799999999974034 -159.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 796.8899999999999864 Td
+(This project takes the English instructions / sentances as the input and convert into PySpark and SQL) Tj
+T* (codes. The result of the generated query can be retrieved and displayed. This application can plot the) Tj
+T* (graphs based on the given English sentence. ) Tj
+T* (Examples:) Tj
+T* (auto_df = spark_ai.create_df\("2022 USA national auto sales by brand"\)) Tj
+T* (auto_df.ai.plot\("pie chart for US sales market shares, show the top 5 brands and the sum of others"\)) Tj
+T* (auto_top_growth_df=auto_df.ai.transform\("top brand with the highest growth"\)) Tj
+T* (auto_top_growth_df.show\(\)) Tj
+T* (LLM involved in converting the given English sentence into PySpark/SQL query ) Tj
+T* (User interface can be developed using any front-end technology. ) Tj
+T* (This can be improved as voice-based queries in future. ) Tj
+T* () Tj
+T* (Refer - Introducing English as the New Programming Language for Apache Spark | Databricks Blog) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 650.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 637.3899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 650.8899999999999864 459.9799999999974034 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 637.3899999999999864 Td
+(LLM, MERN, APACHE SPARK) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 617.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 604.3899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 617.8899999999999864 459.9799999999974034 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 604.3899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+endstream
+endobj
+27 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 28 0 R
+>>
+endobj
+28 0 obj
+<<
+/Length 6276
+>>
+stream
+0.200025 w
+0. G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 816.8899999999999864 Td
+(Project 14: PhishGuard: LLM models for Phishing Detection) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 796.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 783.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 796.8899999999999864 459.9800000000309979 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 783.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 775.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 761.8899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 775.3899999999999864 459.9800000000309979 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 761.8899999999999864 Td
+(PhishGuard: LLM models for Phishing Detection) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 742.3899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 728.8899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 742.3899999999999864 459.9800000000309979 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 728.8899999999999864 Td
+(GenAI / Cybersecurity) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 720.8899999999999864 55.3000000000000043 -297.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 707.3899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 720.8899999999999864 459.9800000000309979 -297.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 707.3899999999999864 Td
+(Phishing poses a significant threat to customers and organisations alike, exploiting deceptive tactics) Tj
+T* (such as fraudulent emails, websites and messages. This comes in the form of email phishing, spear) Tj
+T* (phishing, vishing, SMS phishing etc.) Tj
+T* () Tj
+T* (The goal of this project is to study the application of LLM for categorising emails and detect phishing.) Tj
+T* (A BERT-based model will be fine-tuned for this purpose. An SMTP server, for example APACHE) Tj
+T* (JAMES, would be used in testing the application.) Tj
+T* () Tj
+T* () Tj
+T* (The project would be taken up in the following steps:) Tj
+T* (1. Gain knowledge on \(BERT-based\) LLMs and uses.) Tj
+T* (2. Download the phishing emails datasets.) Tj
+T* (3. Process the above downloaded dataset to remove any noisy data etc.) Tj
+T* (4. Fine tune with LLM with this cleaned data.) Tj
+T* (5. Verify the fine tuning process for its quality at each step.) Tj
+T* (6. Develop the SMTP server for sending out malicious emails. \(Alternatively, an LLM could also be) Tj
+T* (used to send out phishing emails.\)) Tj
+T* (7. Test the application to test against each metric in terms of accuracy, precision, recall and F1-score.) Tj
+T* (8. Repeat the steps to attain better performance.) Tj
+T* () Tj
+T* (Datasets:) Tj
+T* (https://www.kaggle.com/datasets/mohamedouledhamed/phishing-templates-gpt) Tj
+T* () Tj
+T* (https://www.kaggle.com/datasets/subhajournal/phishingemails) Tj
+T* () Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 423.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 409.8899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 423.3899999999999864 459.9800000000309979 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 409.8899999999999864 Td
+(LLM, MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 390.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 376.8899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 390.3899999999999864 459.9800000000309979 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 376.8899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 232.3899999999999864 Td
+(Project 15: ChefGuru: Powered by LLM) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 212.3899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 198.8899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 212.3899999999999864 459.9799999999686406 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 198.8899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 190.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 177.3899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 190.8899999999999864 459.9799999999686406 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 177.3899999999999864 Td
+(ChefGuru: Powered by LLM) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 157.8899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 144.3899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 157.8899999999999864 459.9799999999686406 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 144.3899999999999864 Td
+(NA) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 136.3899999999999864 55.3000000000000043 -125. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 122.8899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 136.3899999999999864 459.9799999999686406 -125. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 122.8899999999999864 Td
+(Most often, we get into a situation when we want to cook something delicious, however, we are short) Tj
+T* (on ingredients at our home. It also creates a lot of confusion about what to cook with the available) Tj
+T* (ingredients. Further, we might not have accessibility to more ingredients from the nearby market due) Tj
+T* (to various reasons like non-availability.) Tj
+T* () Tj
+T* (In such a situation we keep on searching for recipes that match our ingredients online, but hardly get) Tj
+T* (any results and that too takes a lot of time, and ultimately we return to our kitchen disappointed.) Tj
+T* (Theres a need for a system that could actually take ingredients as the input and give us the list of) Tj
+T* (most matching recipes that could help us make delicious food at our homes.) Tj
+T* () Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.78 G
+0. w
+endstream
+endobj
+29 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 30 0 R
+>>
+endobj
+30 0 obj
+<<
+/Length 2244
+>>
+stream
+0. w
+0.78 G
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 831.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 818.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 831.8899999999999864 459.9799999999686406 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 818.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 810.3899999999999864 55.3000000000000043 -182.5 re
+B
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 810.3899999999999864 459.9799999999686406 -182.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 796.8899999999999864 Td
+(Our project aims to make a user aware of the various dishes which can be cooked from the available) Tj
+T* (set of ingredients being input by a user.) Tj
+T* (Scraping Module - Scraping the dataset for ingredients, recipes, etc. ) Tj
+T* (Training Model - Fetching the data and display the output based on the input.) Tj
+T* (Developing UI - Developing a user-friendly UI to present the recipes based on the user inputs) Tj
+T* () Tj
+T* () Tj
+T* (Datasets:) Tj
+T* (https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions) Tj
+T* () Tj
+T* (https://www.kaggle.com/datasets/pes12017000148/food-ingredients-and-recipe-dataset-with-images) Tj
+T* () Tj
+T* (https://www.kaggle.com/datasets/kanishk307/6000-indian-food-recipes-dataset) Tj
+T* () Tj
+T* (https://clickhouse.com/docs/en/getting-started/example-datasets/recipes) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 627.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 614.3899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 627.8899999999999864 459.9799999999686406 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 614.3899999999999864 Td
+(LLM, MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 594.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 581.3899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 594.8899999999999864 459.9799999999686406 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 581.3899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+endstream
+endobj
+31 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 32 0 R
+>>
+endobj
+32 0 obj
+<<
+/Length 6509
+>>
+stream
+0.200025 w
+0. G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 816.8899999999999864 Td
+(Project 16: LLMs for Automated Verilog RTL Code Generation) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 796.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 783.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 796.8899999999999864 459.9800000000234945 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 783.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 775.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 761.8899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 775.3899999999999864 459.9800000000234945 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 761.8899999999999864 Td
+(LLMs for Automated Verilog RTL Code Generation) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 742.3899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 728.8899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 742.3899999999999864 459.9800000000234945 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 728.8899999999999864 Td
+(GenAI / Semiconductor design) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 720.8899999999999864 55.3000000000000043 -159.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 707.3899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 720.8899999999999864 459.9800000000234945 -159.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 707.3899999999999864 Td
+(Verilog is a hardware description language to model and design digital systems. Generating Verilog) Tj
+T* (code is the first step in automating hardware / chip design. ) Tj
+T* () Tj
+T* (The goal of this project is to fine-tune an LLM with Verilog datasets \(collected from GitHub and Verilog) Tj
+T* (textbooks\) and test / use it in generation of Verilog code for different chips. An attempt would be made) Tj
+T* (to develop a test bench for testing the syntax of the so generated Verilog code. ) Tj
+T* () Tj
+T* (The project would involve the following steps: ) Tj
+T* (1\) Download datasets identified from the sources above. ) Tj
+T* (2\) Preprocess the data to identify relevant data. ) Tj
+T* (3\) Use the above clean data to fine-tune open-source CodeGen LLM. ) Tj
+T* (4\) Use this LLM to generate Verilog code for different types of chips. ) Tj
+T* (5\) Develop a test-bench for testing the syntax of the above generated code.) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 561.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 547.8899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 561.3899999999999864 459.9800000000234945 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 547.8899999999999864 Td
+(LLM) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 528.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 514.8899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 528.3899999999999864 459.9800000000234945 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 514.8899999999999864 Td
+(2) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 370.3899999999999864 Td
+(Project 17: LLMfAMAT: LLM for Advanced Materials) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 350.3899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 336.8899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 350.3899999999999864 459.9799999999667079 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 336.8899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 328.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 315.3899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 328.8899999999999864 459.9799999999667079 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 315.3899999999999864 Td
+(LLMfAMAT: LLM for Advanced Materials) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 295.8899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 282.3899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 295.8899999999999864 459.9799999999667079 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 282.3899999999999864 Td
+(GenAI / Computational Material Science) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 274.3899999999999864 55.3000000000000043 -263. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 260.8899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 274.3899999999999864 459.9799999999667079 -263. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 260.8899999999999864 Td
+(Mankind has always been known by advancements in materials; for example from stone age to the) Tj
+T* (silicon age! This significance is too well known if one observes the chips driving the current AI) Tj
+T* (revolution: GPU. Not all materials are made from the traditional metals and alloys nor using the) Tj
+T* (traditional manufacturing techniques. The need of the coming times is engineering \(new\) materials as) Tj
+T* (required \(in contrast to engineering of existing materials\) based on need. For example, a) Tj
+T* (bio-degradable material for holding water in a bottle, fuel for automobiles \(green hydrogen?\) etc ) Tj
+T* () Tj
+T* (The goal of this project is to fine-tune LLM for discovering / designing advanced, custom new) Tj
+T* (materials. A MERN-stack based UI might be necessary to test the above LLM. ) Tj
+T* () Tj
+T* (The steps for realising this project would include: ) Tj
+T* (1\) Identifying the LLM to be fine-tuned with materials data. ) Tj
+T* (2\) Download datasets and pick the relevant subset to be used for fine-tuning. ) Tj
+T* (3\) Fine-tune the LLM.) Tj
+T* (4\) Develop test cases for verifying the LLM.) Tj
+T* (5\) Develop a MERN-stack based UI to implement the above test cases.) Tj
+T* () Tj
+T* (THIS WOULD BE IN TWO PROJECTS FOCUSED ON DIFFERENT TYPES OF MATERIALS.) Tj
+T* () Tj
+T* (Refer - The Collection of Database and Dataset Resources in Materials Science:) Tj
+T* (https://github.com/sedaoturak/data-resources-for-materials-science.) Tj
+T* ( ) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.78 G
+0. w
+endstream
+endobj
+33 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 34 0 R
+>>
+endobj
+34 0 obj
+<<
+/Length 2931
+>>
+stream
+0. w
+0.78 G
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 831.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 818.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 831.8899999999999864 459.9799999999667079 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 818.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 810.3899999999999864 55.3000000000000043 -56. re
+B
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 810.3899999999999864 459.9799999999667079 -56. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 796.8899999999999864 Td
+(Millions of new materials discovered with deep learning: ) Tj
+T* ( https://deepmind.google/discover/blog/millions-of-new-materials-discovered-with-deep-learning/) Tj
+T* ( ) Tj
+T* ( https://github.com/google-deepmind/materials_discovery) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 754.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 740.8899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 754.3899999999999864 459.9799999999667079 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 740.8899999999999864 Td
+(LLM, MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 721.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 707.8899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 721.3899999999999864 459.9799999999667079 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 707.8899999999999864 Td
+(2) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 116.8899999999999864 Td
+(Project 18: Prompt Injection attacks in LLMs) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 96.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 83.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 96.8899999999999864 459.9800000000448676 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 83.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 75.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 61.8899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 75.3899999999999864 459.9800000000448676 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 61.8899999999999864 Td
+(Prompt Injection attacks in LLMs) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 42.3899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 28.8899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 42.3899999999999864 459.9800000000448676 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 28.8899999999999864 Td
+(LLM Security) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.78 G
+0. w
+endstream
+endobj
+35 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 36 0 R
+>>
+endobj
+36 0 obj
+<<
+/Length 2221
+>>
+stream
+0. w
+0.78 G
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 831.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 818.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 831.8899999999999864 459.9800000000448676 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 818.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 810.3899999999999864 55.3000000000000043 -148. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 796.8899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 810.3899999999999864 459.9800000000448676 -148. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 796.8899999999999864 Td
+(LLMs too have vulnerabilities that a hacker could exploit. Prompt Injection Attacks are one such where) Tj
+T* (prompts are generated causing the LLM to reveal what it is supposed to hold secure / private.) Tj
+T* () Tj
+T* (The goal of this project is to replicate this in a chosen LLM.) Tj
+T* () Tj
+T* (The steps would involve:) Tj
+T* (1\) Identifying the LLM to simulate the vulnerability.) Tj
+T* (2\) Learn LangChain to communicate with the LLM.) Tj
+T* (3\) Generate static as well as dynamic prompts \(using LangChain and a Chatbot / MERN-stack based) Tj
+T* (UI\) to entice the LLM to release data that is supposed to be secure / private.) Tj
+T* () Tj
+T* (CHECK WITH THE MENTOR TO KNOW YOUR ELIGIBILITY FOR THIS PROJECT.) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 662.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 648.8899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 662.3899999999999864 459.9800000000448676 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 648.8899999999999864 Td
+(Python, LLM) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 629.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 615.8899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 629.3899999999999864 459.9800000000448676 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 615.8899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+endstream
+endobj
+37 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 38 0 R
+>>
+endobj
+38 0 obj
+<<
+/Length 2759
+>>
+stream
+0.200025 w
+0. G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0. g
+10. 816.8899999999999864 Td
+(Project 19: Story Generator In The Style Of Given Stories) Tj
+ET
+0. G
+0.200025 w
+0. G
+0.200025 w
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+40. 796.8899999999999864 55.3000000000000043 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 783.3899999999999864 Td
+() Tj
+ET
+0.1 0.74 0.61 rg
+0.78 G
+0. w
+0.1 0.74 0.61 rg
+95.3000000000000114 796.8899999999999864 459.979999999979384 -21.5 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+100.3000000000000114 783.3899999999999864 Td
+(Content) Tj
+ET
+0. G
+0.200025 w
+1. g
+0.78 G
+0.1 w
+1. g
+40. 775.3899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 761.8899999999999864 Td
+(Project) Tj
+T* (Title) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 775.3899999999999864 459.979999999979384 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 761.8899999999999864 Td
+(Story Generator In The Style Of Given Stories) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 742.3899999999999864 55.3000000000000043 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 728.8899999999999864 Td
+(Category) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 742.3899999999999864 459.979999999979384 -21.5 re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 728.8899999999999864 Td
+(LLM / Gen AI) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 720.8899999999999864 55.3000000000000043 -56. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 707.3899999999999864 Td
+(Problem) Tj
+T* (Statement) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 720.8899999999999864 459.979999999979384 -56. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 707.3899999999999864 Td
+(Generate a story based on the given prompt in the given author style. The user has to provide few) Tj
+T* (articles/books/stories and give the prompts for telling a story. The proposed Gen AI model has to) Tj
+T* (understand the given stories and generate a new story with the prompted instructions. The generated) Tj
+T* (story should follow the style of given stories.) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 664.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 651.3899999999999864 Td
+(Tech) Tj
+T* (Stack) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 664.8899999999999864 459.979999999979384 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 651.3899999999999864 Td
+(LLM, MERN) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+40. 631.8899999999999864 55.3000000000000043 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 618.3899999999999864 Td
+(Max) Tj
+T* (Groups) Tj
+ET
+1. g
+0.78 G
+0.1 w
+1. g
+95.3000000000000114 631.8899999999999864 459.979999999979384 -33. re
+B
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+100.3000000000000114 618.3899999999999864 Td
+(1) Tj
+ET
+0. G
+0.200025 w
+0.78 G
+0. w
+0. G
+0.200025 w
+0. G
+0.200025 w
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R ]
+/Count 18
+>>
+endobj
+39 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+40 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+41 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+42 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+43 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+44 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+45 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+46 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+47 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+48 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+49 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+50 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+51 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+52 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 39 0 R
+/F2 40 0 R
+/F3 41 0 R
+/F4 42 0 R
+/F5 43 0 R
+/F6 44 0 R
+/F7 45 0 R
+/F8 46 0 R
+/F9 47 0 R
+/F10 48 0 R
+/F11 49 0 R
+/F12 50 0 R
+/F13 51 0 R
+/F14 52 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+53 0 obj
+<<
+/Producer (jsPDF 2.5.1)
+/CreationDate (D:20240415155716+05'30')
+>>
+endobj
+54 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 55
+0000000000 65535 f 
+0000079761 00000 n 
+0000081700 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000006802 00000 n 
+0000006939 00000 n 
+0000014209 00000 n 
+0000014346 00000 n 
+0000017747 00000 n 
+0000017885 00000 n 
+0000020513 00000 n 
+0000020652 00000 n 
+0000027189 00000 n 
+0000027328 00000 n 
+0000029381 00000 n 
+0000029520 00000 n 
+0000035600 00000 n 
+0000035739 00000 n 
+0000038087 00000 n 
+0000038226 00000 n 
+0000043444 00000 n 
+0000043583 00000 n 
+0000050644 00000 n 
+0000050783 00000 n 
+0000053032 00000 n 
+0000053171 00000 n 
+0000055669 00000 n 
+0000055808 00000 n 
+0000062137 00000 n 
+0000062276 00000 n 
+0000064573 00000 n 
+0000064712 00000 n 
+0000071274 00000 n 
+0000071413 00000 n 
+0000074397 00000 n 
+0000074536 00000 n 
+0000076810 00000 n 
+0000076949 00000 n 
+0000079935 00000 n 
+0000080061 00000 n 
+0000080192 00000 n 
+0000080326 00000 n 
+0000080464 00000 n 
+0000080588 00000 n 
+0000080717 00000 n 
+0000080849 00000 n 
+0000080985 00000 n 
+0000081113 00000 n 
+0000081240 00000 n 
+0000081369 00000 n 
+0000081502 00000 n 
+0000081604 00000 n 
+0000081953 00000 n 
+0000082039 00000 n 
+trailer
+<<
+/Size 55
+/Root 54 0 R
+/Info 53 0 R
+/ID [ <23E56430FCE113715E34FB93E93EC720> <23E56430FCE113715E34FB93E93EC720> ]
+>>
+startxref
+82143
+%%EOF
