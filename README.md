@@ -42,4 +42,4 @@ License? Yeah, we have one. Probably. Just don't do anything illegal with it, ok
 If you're stuck, confused, or just wanna chat, feel free to reach out. But no promises we'll respond. Just kidding. Maybe. 😅
 
 ## **Live Demo 🚀**
-Oh, you wanna see it in action? Of course you do! Check out the [live site]([https://www.google.com](https://virtual-vidhya.onrender.com/). Marvel at its glory. Bask in its brilliance. Or just use it like a normal person. Your call. 😎
+Oh, you wanna see it in action? Of course you do! Check out the [live site]([https://www.google.com](https://virtual-vidhya.onrender.com). Marvel at its glory. Bask in its brilliance. Or just use it like a normal person. Your call. 😎
