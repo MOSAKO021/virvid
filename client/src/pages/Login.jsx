@@ -25,8 +25,8 @@ const Login = () => {
     <Wrapper>
       <Form method='post' className='form'>
         <h4>LOGIN</h4>
-        <FormRow type='email' name='email'  />
-        <FormRow type='password' name='password'  />
+        <FormRow type='email' name='email' defaultValue='stu1@vv.com' />
+        <FormRow type='password' name='password' defaultValue='password' />
         <SubmitBtn />
         <p>Not a Member Yet ?          
         <Link to='/register' className='member-btn'>Register</Link>
