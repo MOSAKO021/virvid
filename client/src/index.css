@@ -1,4 +1,3 @@
-/* ============= GLOBAL CSS =============== */
 @import "tailwindcss";
 
 *,
@@ -258,6 +257,7 @@ button:disabled {
   margin-left: -40px;
 }
 .form-input,
+.form-input-file,
 .form-textarea,
 .form-select {
   width: 100%;
@@ -267,7 +267,13 @@ button:disabled {
   border: 1px solid var(--grey-300);
   color: var(--text-color);
 }
+
+.form-input-file{
+  cursor: pointer;
+}
+
 .form-input,
+.form-input-file,
 .form-select,
 .form-btn {
   height: 35px;

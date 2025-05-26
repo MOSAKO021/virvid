@@ -123,6 +123,7 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <>
+    {/* <div className='bg-amber-500'>test</div> */}
       <RouterProvider router={router} />
     </>
   )

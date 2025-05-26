@@ -27,6 +27,8 @@ const JobsContainer = () => {
         };
 
         fetchUserData();
+        // console.log("User Data:", userData);
+        
     }, []);
 
     if (jobs.length === 0) {
@@ -50,7 +52,7 @@ const JobsContainer = () => {
         <Wrapper>
             <div className="jobs">
                 {jobs.map((job) => (
-                    <Job key={job._id} {...job} />
+                    <Job key={job._id} {...{...job, userData}}/>
                 ))}
             </div>
         </Wrapper>

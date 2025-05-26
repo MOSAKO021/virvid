@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "setup-project": "npm i && cd client && npm i",
-    "build" : "npm i --prefix ./client && npm run build --prefix ./client && npm install",
+    "build": "npm i --prefix ./client && npm run build --prefix ./client && npm install",
     "server": "nodemon server",
     "client": "cd client && npm run dev",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
@@ -30,7 +30,9 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "nanoid": "^4.0.2",
+    "node-fetch": "^2.7.0",
     "nodemon": "^2.0.22",
+    "pdfjs-dist": "^2.10.377",
     "react-toastify": "^9.1.2"
   }
 }
