@@ -25,7 +25,7 @@ async function summarizePDF(pdfUrl) {
   const resp = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: {
-      "Authorization": "Bearer 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",
+      "Authorization": "YOUR TOKEN!",
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
