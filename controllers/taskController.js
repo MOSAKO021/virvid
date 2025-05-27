@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import pdfjsLib from 'pdfjs-dist/legacy/build/pdf.js';
 import * as dotenv from 'dotenv';
+import JobSchema from '../models/JobModel.js';
 dotenv.config();
 
 async function fetchPdfTextFromFile(filePath) {
@@ -43,10 +44,24 @@ async function summarizePDF(filePath) {
   const data = await resp.json();
   const ret = data.choices[0].message.content;
   console.log("Summary:\n\n", ret);
+  return {data:data,pdf_text:pdfText,summary:ret};
 }
 
-// ✅ Call it with a corrected file path
-// summarizePDF("http://localhost:5200/public/uploads/1746966603604_1.semi%20structured%20Test.pdf");
-summarizePDF("public/uploads/1746966603604_1.semi structured Test.pdf")
-  .then(() => console.log("Summary completed"))
-  .catch(err => console.error("Error summarizing PDF:", err));
+export default async function summarizeTask(req, res) {    
+    const job = await JobSchema.findById(req.params.id)
+    if (!job) {
+        res.status(404).json({ error: "Job not found" });
+    }
+    const filePath = job.file;
+    if (!filePath) {
+        res.status(400).json({ error: "File path is required" });
+    }
+
+    console.log(filePath)
+  try {
+    const summary = await summarizePDF(filePath);
+    res.status(200).json({ message: "Summary completed","summary":summary });
+  } catch (error) {
+    res.status(500).json({ error: "Error summarizing PDF" });
+  }
+}
