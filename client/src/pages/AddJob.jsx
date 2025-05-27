@@ -9,9 +9,9 @@ const AddJob = () => {
   const [standard, setStandard] = useState('');
   const [video, setVideo] = useState('');
   const [file, setFile] = useState(null);
-  const [textualDataSubmitted, setTextualDataSubmitted] = useState(true);
-  const [identifier, setIdentifier] = useState('66687b1c3287b4d13cd888f8');
-  const [uploadedFile, setUploadedFile] = useState(true);
+  const [textualDataSubmitted, setTextualDataSubmitted] = useState(false);
+  const [identifier, setIdentifier] = useState('null');
+  const [uploadedFile, setUploadedFile] = useState(false);
   const [summarized, setSummarized] = useState('');
   const [textualData, setTextualData] = useState('')
 
@@ -96,7 +96,7 @@ const AddJob = () => {
     // formData.append('identifier', identifier);
 
     try {
-      var resp = await customFetch.post('/jobs/', formData);
+      var resp = await customFetch.post('/jobs', formData);
       setIdentifier(resp.data.job._id);
       setUploadedFile(true);
       toast.success('File uploaded successfully');
