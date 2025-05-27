@@ -10,10 +10,7 @@ const AddJob = () => {
   const [video, setVideo] = useState('');
   const [file, setFile] = useState(null);
   const [textualDataSubmitted, setTextualDataSubmitted] = useState(false);
-  const [identifier, setIdentifier] = useState('null');
-  const [uploadedFile, setUploadedFile] = useState(false);
-  const [summarized, setSummarized] = useState('');
-  const [textualData, setTextualData] = useState('')
+  const [identifier, setIdentifier] = useState(null);
 
   const handleSubjectChange = (e) => setSubject(e.target.value);
   const handleTopicChange = (e) => setTopic(e.target.value);
@@ -24,25 +21,20 @@ const AddJob = () => {
     const selectedFile = e.target.files[0];
     setFile(selectedFile);
   };
-  const combinedHandeleFileChange = (e) => {
-    const formData = new FormData();
+
+  const handleSubmitTextualData = async (e) => {
+    e.preventDefault();
+
+    try {
+      const formData = new FormData();
       formData.append('subjectName', subjectName);
       formData.append('topicName', topicName);
       formData.append('standard', standard);
       formData.append('video', video);
 
       const data = Object.fromEntries(formData);
-      sessionStorage.setItem('jobData', JSON.stringify(data));
-  };
-  const handleSubmitTextualData = async (e) => {
-    e.preventDefault();
-    console.log('handleSubmitTextualData called');
-    combinedHandeleFileChange();
-    toast.success('Textual data submitted successfully. Please upload the PDF file.');
-    setTextualDataSubmitted(true);
-    return ;
-    try {
       const response = await customFetch.post('/jobs', data);
+
       if (response.status === 201 && response.data && response.data.job) {
         const jobId = response.data.job._id;
         toast.success('Textual data submitted successfully. Please upload the PDF file.');
@@ -56,26 +48,6 @@ const AddJob = () => {
       toast.error('Failed to submit textual data');
     }
   };
-  const handleSummarize = async (e) => {
-    e.preventDefault();
-    if (!identifier) {
-      toast.error('Please submit textual data first');
-      return;
-    }
-    try {
-      const response = await customFetch.get(`/tasks/summary/${identifier}`);
-      if (response.status === 200) {
-        setSummarized(response.data.summary.data.choices[0].message.content);
-        setTextualData(response.data.summary.pdf_text);
-        toast.success('PDF summarized successfully');
-      } else {
-        toast.error('Failed to summarize PDF');
-      }
-    } catch (error) {
-      console.error('Error summarizing PDF:', error);
-      toast.error('Failed to summarize PDF');
-    }
-  }
 
   const handleSubmitFile = async (e) => {
     e.preventDefault();
@@ -86,21 +58,13 @@ const AddJob = () => {
     }
 
     const formData = new FormData();
-    var formObject = JSON.parse(sessionStorage.getItem('jobData'));
-    console.log('formObject:', formObject);
-    for (const key in formObject) {
-      formData.append(key, formObject[key]);
-    }
-
     formData.append('file', file);
-    // formData.append('identifier', identifier);
+    formData.append('identifier', identifier);
 
     try {
-      var resp = await customFetch.post('/jobs', formData);
-      setIdentifier(resp.data.job._id);
-      setUploadedFile(true);
+      await customFetch.post('/jobs/files', formData);
       toast.success('File uploaded successfully');
-      // window.location.href = '/dashboard/all-jobs';
+      window.location.href = '/dashboard/all-jobs';
     } catch (error) {
       console.error('Error uploading file:', error);
       toast.error('Failed to upload file');
@@ -109,8 +73,7 @@ const AddJob = () => {
 
   return (
     <Wrapper>
-      {
-      !textualDataSubmitted ? (
+      {!textualDataSubmitted ? (
         <form onSubmit={handleSubmitTextualData} encType='application/json'>
           <label className='form-label'>
             Subject:<br />
@@ -164,7 +127,7 @@ const AddJob = () => {
             Submit Textual Data
           </button>
         </form>
-      ) : !uploadedFile ? (
+      ) : (
         <form onSubmit={handleSubmitFile} encType='multipart/form-data'>
           <div className='form-label'>
             File (PDF only):<br />
@@ -188,38 +151,7 @@ const AddJob = () => {
             Upload File
           </button>
         </form>
-      ):(
-        <>
-        <form onSubmit={handleSummarize} encType='multipart/form-data'>
-          <button className='btn form-btn' type="submit">
-            Summarize PDF
-          </button>
-        </form>
-        {summarized && textualData && (
-          <div className="flex flex-col md:flex-row gap-6 mt-8 h-full min-h-[400px]">
-            {/* Raw PDF Text */}
-            <div className="flex-1 flex flex-col">
-              <label className="form-label mb-2">📄 Raw PDF Text:</label>
-              <textarea
-                className="form-input flex-1 w-full resize-none overflow-y-auto min-h-[400px]"
-                value={textualData}
-                readOnly
-              />
-            </div>
-
-            {/* Summary */}
-            <div className="flex-1 flex flex-col">
-              <label className="form-label mb-2">🧠 Summary:</label>
-              <textarea
-                className="form-input flex-1 w-full resize-none overflow-y-auto min-h-[400px]"
-                value={summarized}
-                readOnly
-              />
-            </div>
-          </div>
-         )}
-      </>
-    )}
+      )}
     </Wrapper>
   );
 };

@@ -11,7 +11,6 @@ import jobRouter from './routes/jobRouter.js'
 import authRouter from './routes/authRouter.js'
 import userRouter from './routes/userRouter.js'
 import User from './models/UserModel.js';
-import taskRouter from './routes/taskRoutes.js';
 
 import {dirname} from 'path'
 import { fileURLToPath } from 'url';
@@ -48,7 +47,6 @@ app.get('/api/users', async(req, res) => {
 
 app.use('/api/v1/jobs', authenticateUser, jobRouter)
 app.use('/api/v1/users', authenticateUser, userRouter)
-app.use('/api/v1/tasks', authenticateUser, taskRouter)
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/getTeacher', userRouter)
 
