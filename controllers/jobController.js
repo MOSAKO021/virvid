@@ -8,13 +8,14 @@ export const textualDatas = async(req, res) => {
         const createdBy = req.user.userId;
         const verified = req.user.role === 'legend';
 
-        const {topicName, subjectName, standard, video} = req.body;
+        const {topicName, subjectName, standard, video, file} = req.body;
 
         const job = new Job({
             topicName,
             subjectName,
             standard,
             video,
+            file: file ? file : null,
             createdBy,
             verified
         })
@@ -28,7 +29,8 @@ export const textualDatas = async(req, res) => {
 }
 
 export const fileups = async(req, res) => {
-    console.log(req);
+    var res2 = await textualDatas(req, res);
+    console.log("res2: ", res2);
     const flie = req.file;
     const identifier = req.body.identifier;
     if (!flie){
