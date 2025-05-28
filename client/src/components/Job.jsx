@@ -20,24 +20,27 @@ const Job = ({
   createdBy,
   standard,
   file,
+  userData
 }) => {
   const [userName, setUserName] = useState('');
-  const [userData, setUserData] = useState(null);
+  // const [userData, setUserData] = useState(userData);
   const [modalType, setModalType] = useState(null); // 'video' | 'pdf' | null
 
   const date = day(createdAt).format('MMM DD, YYYY');
 
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const response = await customFetch.get('/users/current-user');
-        setUserData(response.data.user);
-      } catch (error) {
-        console.error('Error fetching user data:', error);
-      }
-    };
-    fetchUserData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchUserData = async () => {
+  //     try {
+  //       const response = await customFetch.get('/users/current-user');
+  //       setUserData(response.data.user);
+  //     } catch (error) {
+  //       console.error('Error fetching user data:', error);
+  //     }
+  //   };
+  //   if (!userData) {
+  //   fetchUserData();
+  // }
+  // }, []);
 
   useEffect(() => {
     const fetchUserName = async () => {

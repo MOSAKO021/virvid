@@ -30,7 +30,7 @@ const JobsContainer = () => {
         // console.log("User Data:", userData);
         
     }, []);
-
+    console.log("User Data:", userData);
     if (jobs.length === 0) {
         return (
             <Wrapper>

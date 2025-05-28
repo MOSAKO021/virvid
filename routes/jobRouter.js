@@ -17,7 +17,7 @@ import upload from '../middleware/multerMiddleware.js'
 
 
 router.route('/').get(getAllJobs)
-router.route('/').post(textualDatas)
+router.route('/').post(upload.single('file'),textualDatas)
 router.route('/files').post(upload.single('file'), fileups);
 
 router.route('/stats').get([

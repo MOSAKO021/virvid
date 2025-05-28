@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { toast } from 'react-toastify';
 import customFetch from '../components/customFetch';
 import Wrapper from '../assets/wrappers/DashboardFormPage';
@@ -9,16 +9,72 @@ const AddJob = () => {
   const [standard, setStandard] = useState('');
   const [video, setVideo] = useState('');
   const [file, setFile] = useState(null);
-  const [textualDataSubmitted, setTextualDataSubmitted] = useState(true);
-  const [identifier, setIdentifier] = useState('66687b1c3287b4d13cd888f8');
-  const [uploadedFile, setUploadedFile] = useState(true);
+  // const [textualDataSubmitted, setTextualDataSubmitted] = useState(false);
+  const [identifier, setIdentifier] = useState(null);
+  const [uploadedFile, setUploadedFile] = useState(false);
   const [summarized, setSummarized] = useState('');
   const [textualData, setTextualData] = useState('')
+  const [polling, setPolling] = useState(false);
+  const [taskId, setTaskId] = useState(null);
 
   const handleSubjectChange = (e) => setSubject(e.target.value);
   const handleTopicChange = (e) => setTopic(e.target.value);
   const handleStandardChange = (e) => setStandard(e.target.value);
   const handleVideoChange = (e) => setVideo(e.target.value);
+
+ useEffect(() => {
+    let intervalId;
+    const pollForResult = async () => {
+      if (!polling || !identifier) return; // If polling is false or identifier doesn't exist, exit
+
+      try {
+        const response = await customFetch.get(`/tasks/result/${taskId}`);
+        if (response.status === 200 && response.data) {
+            // Assuming 'completed' status means the result is ready
+            toast.success('Result is ready');
+            setPolling(false);  // Stop polling once the result is ready
+            setSummarized(response.data.data.choices[0].message.content);
+            setTextualData(response.data.pdf_text);
+          // } else {
+          //   // If status is not completed, just continue polling
+          //   console.log('Waiting for result...');
+          // }
+        }
+        else if(response.status===202){
+          console.log('Waiting for result...');
+        } else {
+          toast.error('Failed to get result');
+          setPolling(false);  // Stop polling on error
+        }
+      } catch (error) {
+        console.error('Error polling for result:', error);
+        toast.error('Failed to get result');
+        setPolling(false);  // Stop polling on error
+      }
+    };
+
+    // Start polling when `polling` is true
+    if (polling) {
+      intervalId = setInterval(pollForResult, 10000); // Poll every 5 seconds
+    }
+
+    // Cleanup function to stop the polling when the component is unmounted or polling stops
+    return () => {
+      if (intervalId) clearInterval(intervalId);
+    };
+  }, [polling]);
+
+  // useEffect(() => {
+  //   setUploadedFile(true)
+  //   setIdentifier('68368d6d7e99961dac957120');
+
+  //    var e = {
+  //     preventDefault: function(){
+  //       console.log("hello")
+  //     }
+  //   }
+  //   handleSummarize(e)
+  // }, []);
 
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
@@ -39,14 +95,14 @@ const AddJob = () => {
     console.log('handleSubmitTextualData called');
     combinedHandeleFileChange();
     toast.success('Textual data submitted successfully. Please upload the PDF file.');
-    setTextualDataSubmitted(true);
+    // setTextualDataSubmitted(true);
     return ;
     try {
       const response = await customFetch.post('/jobs', data);
       if (response.status === 201 && response.data && response.data.job) {
         const jobId = response.data.job._id;
         toast.success('Textual data submitted successfully. Please upload the PDF file.');
-        setTextualDataSubmitted(true);
+        // setTextualDataSubmitted(true);
         setIdentifier(jobId);
       } else {
         toast.error('Failed to submit textual data');
@@ -65,9 +121,11 @@ const AddJob = () => {
     try {
       const response = await customFetch.get(`/tasks/summary/${identifier}`);
       if (response.status === 200) {
-        setSummarized(response.data.summary.data.choices[0].message.content);
-        setTextualData(response.data.summary.pdf_text);
-        toast.success('PDF summarized successfully');
+        setTaskId(response.data.taskId);
+        setPolling(true);
+        // setSummarized(response.data.summary.data.choices[0].message.content);
+        // setTextualData(response.data.summary.pdf_text);
+        toast.success('PDF summarization started successfully');
       } else {
         toast.error('Failed to summarize PDF');
       }
@@ -79,11 +137,12 @@ const AddJob = () => {
 
   const handleSubmitFile = async (e) => {
     e.preventDefault();
-
+    console.log('handleSubmitFile called');
     if (!file || file.size > 5000000) {
       toast.error('File is required and must be less than 5MB');
       return;
     }
+    await handleSubmitTextualData(e);
 
     const formData = new FormData();
     var formObject = JSON.parse(sessionStorage.getItem('jobData'));
@@ -97,7 +156,8 @@ const AddJob = () => {
 
     try {
       var resp = await customFetch.post('/jobs/', formData);
-      setIdentifier(resp.data.job._id);
+      console.log('Response from file upload:', resp.data);
+      setIdentifier(resp.data._id);
       setUploadedFile(true);
       toast.success('File uploaded successfully');
       // window.location.href = '/dashboard/all-jobs';
@@ -110,8 +170,8 @@ const AddJob = () => {
   return (
     <Wrapper>
       {
-      !textualDataSubmitted ? (
-        <form onSubmit={handleSubmitTextualData} encType='application/json'>
+      !uploadedFile ? (
+        <form onSubmit={handleSubmitFile} encType='application/json'>
           <label className='form-label'>
             Subject:<br />
             <input
@@ -160,13 +220,10 @@ const AddJob = () => {
             />
           </label>
           <br />
-          <button className='btn form-btn' type="submit">
+          {/* <button className='btn form-btn' type="submit">
             Submit Textual Data
-          </button>
-        </form>
-      ) : !uploadedFile ? (
-        <form onSubmit={handleSubmitFile} encType='multipart/form-data'>
-          <div className='form-label'>
+          </button> */}
+           <div className='form-label'>
             File (PDF only):<br />
             <label htmlFor="fileUpload" className="btn">
               Choose PDF
@@ -183,12 +240,11 @@ const AddJob = () => {
             {/* <div className='bg-amber-500'>test</div> */}
             <span className="ml-10" style={{marginLeft: 10}}>{file ? file.name : 'No file chosen'}</span>
           </div>
-          <br />
           <button className='btn form-btn' type="submit">
-            Upload File
+            Submit
           </button>
         </form>
-      ):(
+      ) :(
         <>
         <form onSubmit={handleSummarize} encType='multipart/form-data'>
           <button className='btn form-btn' type="submit">
