@@ -33,6 +33,8 @@
     "node-fetch": "^2.7.0",
     "nodemon": "^2.0.22",
     "pdfjs-dist": "^2.10.377",
-    "react-toastify": "^9.1.2"
+    "react-toastify": "^9.1.2",
+    "redis": "^5.1.0",
+    "uuid": "^11.1.0"
   }
 }

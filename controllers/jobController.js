@@ -19,8 +19,9 @@ export const textualDatas = async(req, res) => {
             verified
         })
         await job.save();
-
-        res.status(201).json({ job });
+        req.body.identifier = job._id;
+        const job2 = await fileups(req, res);
+        res.status(201).json(job2 );
     } catch (e){
         console.error(e);
         res.status(500).json({msg:"Edo dobindi"});
@@ -28,16 +29,18 @@ export const textualDatas = async(req, res) => {
 }
 
 export const fileups = async(req, res) => {
-    console.log(req);
+    // var res2 = await textualDatas(req, res);
+    // console.log("res2: ", res2);
     const flie = req.file;
     const identifier = req.body.identifier;
-    if (!flie){
-        return res.status(400).json({message: "No file uploaded"})
-    }
+    // if (!flie){
+    //     return res.status(400).json({message: "No file uploaded"})
+    // }
     const job = await Job.findById(identifier)
     job.file = flie.path;
     await job.save();
-    res.status(201).json({job});
+    return job
+    // res.status(201).json({job});
 }
 
 export const getAllJobs = async (req, res) => {
