@@ -16,6 +16,10 @@ const JobSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
     },
+    summary:{
+        type: String,
+        default: "",
+    },
     verified: {
         type: Boolean,
         default: false,

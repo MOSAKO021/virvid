@@ -1,5 +1,7 @@
 import fetch from 'node-fetch';
 import pdfjsLib from 'pdfjs-dist/legacy/build/pdf.js';
+import dotenv from 'dotenv';
+dotenv.config();
 
 async function fetchPdfText(pdfUrl) {
   const response = await fetch(pdfUrl);
@@ -21,11 +23,13 @@ async function fetchPdfText(pdfUrl) {
 
 async function summarizePDF(pdfUrl) {
   const pdfText = await fetchPdfText(pdfUrl);
+  console.log("Extracted PDF text:", pdfText.slice(0, 100)); // Log first 100 characters for debugging
+  
 
   const resp = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: {
-      "Authorization": "YOUR TOKEN!",
+      "Authorization": `Bearer ${process.env.API_KEY}`,
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
@@ -40,10 +44,14 @@ async function summarizePDF(pdfUrl) {
   });
 
   const data = await resp.json();
+  console.log("key:", process.env.JWT_SECRET);
+  
+  console.log("Response from OpenRouter:", data);
+  
   const ret = data.choices[0].message.content;
   console.log("Summary:\n\n", ret);
 //   console.log(pdfText);
 }
-
+console.log("key:", process.env.JWT_SECRET);
 // Example usage:
 summarizePDF("http://localhost:5200/public/uploads/1746966603604_1.semi%20structured%20Test.pdf");

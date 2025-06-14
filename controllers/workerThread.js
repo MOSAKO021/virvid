@@ -1,11 +1,12 @@
 import fs from 'fs/promises';
 import pdfjsLib from 'pdfjs-dist/legacy/build/pdf.js';
-import * as dotenv from 'dotenv';
 import { Worker,workerData } from 'worker_threads';
 // import {client } from '../server';
 import redis from 'redis';
-
+import dotenv from 'dotenv';
+import fetch from 'node-fetch';
 dotenv.config();
+
 
 const client = redis.createClient({url:process.env.REDIS_URL});
 client.connect().catch(err => {
@@ -21,7 +22,15 @@ client.on('end', () => {
 });
 
 async function fetchPdfTextFromFile(filePath) {
-  const pdfData = await fs.readFile(filePath);
+  // console.log(filePath.split('\\'));
+  let new_path = "http://localhost:5200/" + filePath.split('\\').join('/');
+  
+  console.log("new_path:", new_path);
+  
+  const response = await fetch(new_path);
+  // console.log("Response status:", response);
+  
+  const pdfData = await response.arrayBuffer();
 
   const loadingTask = pdfjsLib.getDocument({ data: pdfData });
   const pdf = await loadingTask.promise;
@@ -33,12 +42,15 @@ async function fetchPdfTextFromFile(filePath) {
     const pageText = content.items.map(item => item.str).join(' ');
     fullText += pageText + '\n\n';
   }
-
+  console.log( fullText.slice(0, 100)); // Log first 100 characters for debugging
+  
   return fullText.slice(0, 4000); // Truncate if needed
 }
 
 async function summarizePDF(filePath) {
   const pdfText = await fetchPdfTextFromFile(filePath);
+  console.log("Extracted PDF text:", pdfText.slice(0, 100)); // Log first 100 characters for debugging
+  
 
   const resp = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
@@ -58,6 +70,8 @@ async function summarizePDF(filePath) {
   });
 
   const data = await resp.json();
+  console.log("Response from OpenRouter:", data);
+  
   const ret = data.choices[0].message.content;
   // console.log("Summary:\n\n", ret);
   return {data:data,pdf_text:pdfText,summary:ret};

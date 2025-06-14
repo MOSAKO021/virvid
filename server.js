@@ -9,6 +9,7 @@ import redis from 'redis';
 import multer from 'multer';
 
 import jobRouter from './routes/jobRouter.js'
+import taskRouter from './routes/taskRouter.js'
 import authRouter from './routes/authRouter.js'
 import userRouter from './routes/userRouter.js'
 import User from './models/UserModel.js';

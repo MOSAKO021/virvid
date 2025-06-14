@@ -4,6 +4,7 @@ const router = Router()
 import {
     getAllJobs,
     getJob,
+    addSummary,
     createJob,
     updateJob,
     deleteJob,
@@ -17,6 +18,7 @@ import upload from '../middleware/multerMiddleware.js'
 
 
 router.route('/').get(getAllJobs)
+router.route('/add-summary').post(addSummary);
 router.route('/').post(upload.single('file'),textualDatas)
 router.route('/files').post(upload.single('file'), fileups);
 

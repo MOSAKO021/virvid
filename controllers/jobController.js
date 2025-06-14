@@ -28,6 +28,31 @@ export const textualDatas = async(req, res) => {
     }
 }
 
+export const addSummary = async (req, res) => {
+  try {
+
+    const { summary, identifier } = req.body;
+
+    if (!summary || !identifier) {
+      return res.status(400).json({ msg: 'Please provide summary and identifier' });
+    }
+
+    const job = await Job.findById(identifier);
+    if (!job) {
+      return res.status(404).json({ msg: 'Job not found' });
+    }
+
+    job.summary = summary;
+    await job.save();
+
+    res.status(StatusCodes.OK).json({ msg: 'Summary added successfully', job });
+  } catch (error) {
+    console.error('Error in addSummary:', error);
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: 'Something went wrong', error: error.message });
+  }
+};
+
+
 export const fileups = async(req, res) => {
     // var res2 = await textualDatas(req, res);
     // console.log("res2: ", res2);
