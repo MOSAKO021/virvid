@@ -1,4 +1,3 @@
-// JobModel.js
 import mongoose from 'mongoose';
 
 const JobSchema = new mongoose.Schema({
@@ -7,7 +6,7 @@ const JobSchema = new mongoose.Schema({
     file: {
         type: String,
         default: "",
-    }, // Store binary data instead of just the filename
+    }, 
     video: String,
     standard: {
         type: Number,
@@ -16,7 +15,7 @@ const JobSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
     },
-    summary:{
+    text:{
         type: String,
         default: "",
     },

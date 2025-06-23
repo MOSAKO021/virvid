@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { FaBriefcase, FaCalendarAlt } from 'react-icons/fa';
+import { FaCalendarAlt, FaUserGraduate } from 'react-icons/fa';
 import { Form } from 'react-router-dom';
 import Wrapper from '../assets/wrappers/Job';
 import JobInfo from './JobInfo';
 import day from 'dayjs';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 import customFetch from '../components/customFetch';
-import Modal from './Modal'; // Make sure Modal.js is in the correct path
+import Modal from './Modal';
 
 day.extend(advancedFormat);
 
@@ -23,24 +23,9 @@ const Job = ({
   userData
 }) => {
   const [userName, setUserName] = useState('');
-  // const [userData, setUserData] = useState(userData);
-  const [modalType, setModalType] = useState(null); // 'video' | 'pdf' | null
+  const [modalType, setModalType] = useState(null);
 
   const date = day(createdAt).format('MMM DD, YYYY');
-
-  // useEffect(() => {
-  //   const fetchUserData = async () => {
-  //     try {
-  //       const response = await customFetch.get('/users/current-user');
-  //       setUserData(response.data.user);
-  //     } catch (error) {
-  //       console.error('Error fetching user data:', error);
-  //     }
-  //   };
-  //   if (!userData) {
-  //   fetchUserData();
-  // }
-  // }, []);
 
   useEffect(() => {
     const fetchUserName = async () => {
@@ -62,6 +47,17 @@ const Job = ({
     return match && match[1] ? match[1] : '';
   };
 
+  const handleAttemptQuiz = async () => {
+    try {
+      const response = await customFetch.post('/attempt-quiz', { _id });
+      console.log('Quiz attempt successful:', response.data);
+      // Optionally display a message or redirect
+    } catch (error) {
+      console.error('Error attempting quiz:', error);
+      // Optionally show error feedback
+    }
+  };
+
   return (
     <Wrapper>
       <header>
@@ -74,7 +70,7 @@ const Job = ({
       <div className="content">
         <div className="content-center">
           <JobInfo icon={<FaCalendarAlt />} text={date} />
-          <JobInfo icon={<FaBriefcase />} text={userName} />
+          <JobInfo icon={<FaUserGraduate />} text={userName} />
 
           <button className="btn video-btn" onClick={() => setModalType('pdf')}>
             View PDF
@@ -103,6 +99,12 @@ const Job = ({
                   Delete
                 </button>
               </Form>
+            )}
+
+            {userRole === 'user' && (
+              <button className="btn quiz-btn" onClick={handleAttemptQuiz}>
+                Attempt Quiz
+              </button>
             )}
           </footer>
         )}

@@ -104,6 +104,16 @@
   }
 }
 
+.quiz-btn {
+  background-color: #007bff;
+  color: white;
+  margin-left: 0.5rem;
+}
+.quiz-btn:hover {
+  background-color: #0056b3;
+}
+
+
 .spinner-text {
   margin-top: 1rem;
   font-size: 1.2rem;

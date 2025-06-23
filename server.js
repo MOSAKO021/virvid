@@ -32,19 +32,19 @@ app.use('/public/uploads', express.static(path.resolve(__dirname, 'public/upload
 app.use(cookieParser());
 app.use(express.json());
 
-const client = redis.createClient({url:process.env.REDIS_URL});
-client.connect().catch(err => {
-  console.error('Redis connection error:', err);
-});
+// const client = redis.createClient({url:process.env.REDIS_URL});
+// client.connect().catch(err => {
+//   console.error('Redis connection error:', err);
+// });
 
-client.on('connect', () => {
-  console.log('Connected to Redis');
-});
+// client.on('connect', () => {
+//   console.log('Connected to Redis');
+// });
 
-client.on('end', () => {
-  console.log('Redis client connection closed');
-});
-export {client};
+// client.on('end', () => {
+//   console.log('Redis client connection closed');
+// });
+// export {client};
 
 // app.get('/', (req, res) => {
 //   res.send('Backend 5200');
@@ -58,12 +58,12 @@ app.get('/api/users', async(req, res) => {
   console.log("get userrs");
   let data = await User.find({});
   console.log(data);
-  res.send(data);
+  res.send(data); 
 })
 
 app.use('/api/v1/jobs', authenticateUser, jobRouter)
 app.use('/api/v1/users', authenticateUser, userRouter)
-app.use('/api/v1/tasks', taskRouter)
+// app.use('/api/v1/tasks', taskRouter)
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/getTeacher', userRouter)
 

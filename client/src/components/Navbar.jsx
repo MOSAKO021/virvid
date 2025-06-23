@@ -16,7 +16,7 @@ const Navbar = () => {
         </button>
         <div>
         <img src={logo} alt='mosako' className='logo' />
-          <h4 className="logo-text"><b>My first project</b></h4>
+          <h4 className="logo-text"><b>Dashboard</b></h4>
         </div>
         <div className="btn-container">
           <ThemeToggle />

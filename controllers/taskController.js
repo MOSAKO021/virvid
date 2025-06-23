@@ -3,7 +3,7 @@ import { Worker, workerData } from 'worker_threads';
 import { v4 as uuidv4 } from 'uuid';
 import path from 'path';
 // import redis from 'redis';
-import {client} from '../server.js'; // Assuming you have a server.js file that exports the Redis client
+// import {client} from '../server.js'; // Assuming you have a server.js file that exports the Redis client
 
 // const client = redis.createClient({url:process.env.REDIS_URL});
 // client.connect().catch(err => {
@@ -19,7 +19,7 @@ import {client} from '../server.js'; // Assuming you have a server.js file that 
 // });
 
 const workerPath = path.resolve('./controllers/workerThread.js');
-console.log('Worker Path:', workerPath);
+// console.log('Worker Path:', workerPath);
 
 export async function summarizeTask(req, res) {
     const taskId = uuidv4();

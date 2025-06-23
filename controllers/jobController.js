@@ -2,13 +2,15 @@ import 'express-async-errors';
 import Job from '../models/JobModel.js';
 import { StatusCodes } from 'http-status-codes';
 import mongoose from 'mongoose';
+import fetch from 'node-fetch';
+import pdfjsLib from 'pdfjs-dist/legacy/build/pdf.js';
 
-export const textualDatas = async(req, res) => {
-    try{
+export const textualDatas = async (req, res) => {
+    try {
         const createdBy = req.user.userId;
         const verified = req.user.role === 'legend';
 
-        const {topicName, subjectName, standard, video} = req.body;
+        const { topicName, subjectName, standard, video } = req.body;
 
         const job = new Job({
             topicName,
@@ -21,39 +23,55 @@ export const textualDatas = async(req, res) => {
         await job.save();
         req.body.identifier = job._id;
         const job2 = await fileups(req, res);
-        res.status(201).json(job2 );
-    } catch (e){
+        const temp_file = job2.file;
+        const file = 'http://localhost:5200/' + temp_file.replace(/\s/g, '%20');
+        const response = await fetch(file);
+        const pdfData = await response.arrayBuffer();
+        const loadingTask = pdfjsLib.getDocument({ data: pdfData });
+        const pdf = await loadingTask.promise;
+        let fullText = '';
+        for (let i = 1; i <= pdf.numPages; i++) {
+            const page = await pdf.getPage(i);
+            const content = await page.getTextContent();
+            const pageText = content.items.map(item => item.str).join(' ');
+            fullText += pageText + '\n\n';
+        }
+        // console.log(fullText);
+        job2.text = fullText;
+        await job2.save();
+        res.status(201).json(job2);
+    } catch (e) {
         console.error(e);
-        res.status(500).json({msg:"Edo dobindi"});
+        res.status(500).json({ msg: "Edo dobindi" });
     }
 }
 
 export const addSummary = async (req, res) => {
-  try {
+    try {
 
-    const { summary, identifier } = req.body;
+        const { identifier } = req.body;
 
-    if (!summary || !identifier) {
-      return res.status(400).json({ msg: 'Please provide summary and identifier' });
+        if (!summary || !identifier) {
+            return res.status(400).json({ msg: 'Please provide summary and identifier' });
+        }
+
+        const job = await Job.findById(identifier);
+        if (!job) {
+            return res.status(404).json({ msg: 'Job not found' });
+        }
+
+        job.summary = summary;
+        await job.save();
+
+        res.status(StatusCodes.OK).json({ msg: 'Summary added successfully', job });
+    } catch (error) {
+        console.error('Error in addSummary:', error);
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: 'Something went wrong', error: error.message });
     }
-
-    const job = await Job.findById(identifier);
-    if (!job) {
-      return res.status(404).json({ msg: 'Job not found' });
-    }
-
-    job.summary = summary;
-    await job.save();
-
-    res.status(StatusCodes.OK).json({ msg: 'Summary added successfully', job });
-  } catch (error) {
-    console.error('Error in addSummary:', error);
-    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: 'Something went wrong', error: error.message });
-  }
 };
 
 
-export const fileups = async(req, res) => {
+export const fileups = async (req, res) => {
     // var res2 = await textualDatas(req, res);
     // console.log("res2: ", res2);
     const flie = req.file;
@@ -74,25 +92,25 @@ export const getAllJobs = async (req, res) => {
         const { verified, sort } = req.query
         const queryObject = {
         };
-        if (verified && verified !== 'all'){
+        if (verified && verified !== 'all') {
             queryObject.verified = verified;
         }
         const sortOptions = {
             newest: '-createdAt',
             oldest: 'createdAt',
         }
-        const sortKey = sortOptions[sort] || {verified: false};
+        const sortKey = sortOptions[sort] || { verified: false };
         jobs = await Job.find(queryObject).sort(sortKey);
         res.status(StatusCodes.OK).json({ jobs })
     } else {
         if (req.user.role === 'admin') {
-            const {verified, sort} = req.query;
+            const { verified, sort } = req.query;
             const queryObject = { createdBy: req.user.userId };
             if (verified && verified !== 'all') {
                 queryObject.verified = verified;
             }
             const sortOptions = {
-                newest : '-createdAt',
+                newest: '-createdAt',
                 oldest: 'createdAt',
             }
             const sortKey = sortOptions[sort] || sortOptions.newest;
@@ -109,8 +127,8 @@ export const getAllJobs = async (req, res) => {
 
 
 export const createJob = async (req, res) => {
-    console.log("file log be: ",req.file);
-    console.log("req___________________________________________________: ",req);
+    console.log("file log be: ", req.file);
+    console.log("req___________________________________________________: ", req);
     try {
         const createdBy = req.user.userId;
         const verified = req.user.role === 'legend';
@@ -121,14 +139,13 @@ export const createJob = async (req, res) => {
         console.log("sname: ", sname);
         const vid = req.body.video;
         console.log("vid: ", vid);
-        const stan = req.body.standard;        
+        const stan = req.body.standard;
         console.log("stan: ", stan);
 
 
         const job = new Job({
             tname,
             sname,
-            // file: filePath,
             vid,
             stan,
             createdBy,
@@ -139,7 +156,7 @@ export const createJob = async (req, res) => {
         await job.save();
 
         // Respond with success message
-        res.status(201).json( job._id);
+        res.status(201).json(job._id);
     } catch (error) {
         console.error(error);
         res.status(500).json({ msg: 'Server Error' });
@@ -150,7 +167,7 @@ export const createJob = async (req, res) => {
 
 
 export const getJob = async (req, res) => {
-    console.log(req.params);
+    // console.log(req.params);
     const job = await Job.findById(req.params.id)
     res.status(StatusCodes.OK).json({ job });
 }
