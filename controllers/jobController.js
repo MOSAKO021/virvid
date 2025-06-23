@@ -5,6 +5,46 @@ import mongoose from 'mongoose';
 import fetch from 'node-fetch';
 import pdfjsLib from 'pdfjs-dist/legacy/build/pdf.js';
 
+
+const checkForExplicitContent = async (text) => {
+  const moderationPrompt = `
+You are a strict content filter. Review the following text carefully for any explicit, sexual, violent, abusive, or inappropriate language.
+
+If the content is completely clean and appropriate, respond with exactly: true
+
+If the content is inappropriate, respond with a very short reason like: "offensive language" or "contains sexual content". No extra explanation.
+
+Text:
+"""${text}"""
+`;
+
+  try {
+    const response = await fetch('http:localhost:5200/api/v1/chat', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        messages: [
+          { role: 'user', content: moderationPrompt }
+        ]
+      })
+    });
+
+    const data = await response.json();
+    const aiReply = (data.response || '').trim().toLowerCase();
+
+    const isClean = aiReply === 'true';
+    return { isClean, reason: isClean ? null : aiReply };
+  } catch (error) {
+    console.error('Moderation check failed:', error);
+    return { isClean: false, reason: 'AI moderation error' };
+  }
+};
+
+export default checkForExplicitContent;
+
+
 export const textualDatas = async (req, res) => {
     try {
         const createdBy = req.user.userId;
@@ -36,8 +76,13 @@ export const textualDatas = async (req, res) => {
             const pageText = content.items.map(item => item.str).join(' ');
             fullText += pageText + '\n\n';
         }
-        // console.log(fullText);
+        const moderationResult = await checkForExplicitContent(fullText);
+        if (!moderationResult.isClean) {
+            await Job.findByIdAndDelete(job2._id); 
+            return res.status(400).json({ msg: `Content rejected: ${moderationResult.reason}` });
+        }
         job2.text = fullText;
+        job2.verified = true;
         await job2.save();
         res.status(201).json(job2);
     } catch (e) {

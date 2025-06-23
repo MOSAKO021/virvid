@@ -7,6 +7,7 @@ import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import redis from 'redis';
 import multer from 'multer';
+import cors from 'cors';
 
 import jobRouter from './routes/jobRouter.js'
 import taskRouter from './routes/taskRouter.js'
@@ -20,6 +21,7 @@ import path from 'path';
 
 import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.js';
 import { authenticateUser } from './middleware/authMiddleware.js';
+import fetch from 'node-fetch';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -31,6 +33,8 @@ app.use('/public/uploads', express.static(path.resolve(__dirname, 'public/upload
 
 app.use(cookieParser());
 app.use(express.json());
+
+app.use(cors());
 
 // const client = redis.createClient({url:process.env.REDIS_URL});
 // client.connect().catch(err => {
@@ -60,6 +64,30 @@ app.get('/api/users', async(req, res) => {
   console.log(data);
   res.send(data); 
 })
+
+app.post('/api/v1/chat', async (req, res) => {
+  const messages = req.body.messages;
+
+  try {
+    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: "deepseek/deepseek-r1:free",
+        messages
+      })
+    });
+
+    const data = await response.json();
+    res.json({ response: data.choices?.[0]?.message?.content || 'No response from AI' });
+  } catch (err) {
+    console.error('AI API error:', err);
+    res.status(500).json({ error: 'Something went wrong with AI request' });
+  }
+});
 
 app.use('/api/v1/jobs', authenticateUser, jobRouter)
 app.use('/api/v1/users', authenticateUser, userRouter)

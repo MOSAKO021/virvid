@@ -9,3 +9,4 @@ export {default as StatItem} from './StatItem';
 export {default as SubmitBtn} from './SubmitBtn';
 export {default as customFetch} from './customFetch';
 export {default as StatsContainer} from './StatsContainer';
+export {default as Modal} from './Modal2';

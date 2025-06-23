@@ -13,7 +13,8 @@ import {
   Profile,
   Admin,
   Issues,
-  Messages
+  Messages,
+  OpenChat
 } from './pages'
 
 import { action as registerAction } from './pages/Register'
@@ -28,6 +29,7 @@ import { action as profileAction } from './pages/Profile'
 import { loader as editJobLoader } from './pages/EditJob'
 import { loader as adminLoader } from './pages/Admin'
 import { loader as statsLoader } from './pages/Stats'
+
 import { loader as dashboardLoader1 } from './pages/Dashboard'
 import Dashboard from './pages/Dashboard'
 
@@ -113,6 +115,10 @@ const router = createBrowserRouter([
             path: 'delete-job/:id',
             action: deleteJobAction,
           }, 
+          {
+            path: 'chat',
+            element: <OpenChat />
+          }
         ]
       },
     ]

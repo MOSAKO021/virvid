@@ -13,3 +13,4 @@ export {default as Register} from './Register';
 export {default as Stats} from './Stats';
 export {default as Issues} from './Issues';
 export {default as Messages} from './Messages';
+export {default as OpenChat} from '../pages/OpenChat';

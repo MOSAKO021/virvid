@@ -6,12 +6,14 @@ import JobInfo from './JobInfo';
 import day from 'dayjs';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 import customFetch from '../components/customFetch';
-import Modal from './Modal';
+import Modal2 from './Modal2';
+import ChatWithDoc from './ChatWithDoc'; // ✅ Import Chat Component
 
 day.extend(advancedFormat);
 
 const Job = ({
   _id,
+  text,
   topicName,
   subjectName,
   video,
@@ -24,6 +26,7 @@ const Job = ({
 }) => {
   const [userName, setUserName] = useState('');
   const [modalType, setModalType] = useState(null);
+  const [isChatOpen, setIsChatOpen] = useState(false); // ✅ Chat Modal State
 
   const date = day(createdAt).format('MMM DD, YYYY');
 
@@ -51,10 +54,8 @@ const Job = ({
     try {
       const response = await customFetch.post('/attempt-quiz', { _id });
       console.log('Quiz attempt successful:', response.data);
-      // Optionally display a message or redirect
     } catch (error) {
       console.error('Error attempting quiz:', error);
-      // Optionally show error feedback
     }
   };
 
@@ -67,6 +68,7 @@ const Job = ({
           <p>{subjectName}</p>
         </div>
       </header>
+
       <div className="content">
         <div className="content-center">
           <JobInfo icon={<FaCalendarAlt />} text={date} />
@@ -102,9 +104,15 @@ const Job = ({
             )}
 
             {userRole === 'user' && (
-              <button className="btn quiz-btn" onClick={handleAttemptQuiz}>
-                Attempt Quiz
-              </button>
+              <>
+                <button className="btn video-btn" onClick={handleAttemptQuiz}>
+                  Attempt Quiz
+                </button>
+
+                <button className="btn quiz-btn" onClick={() => setIsChatOpen(true)}>
+                  Chat with Doc
+                </button>
+              </>
             )}
           </footer>
         )}
@@ -128,6 +136,17 @@ const Job = ({
             />
           )}
         </Modal>
+      )}
+
+      {/* ✅ Chat Modal */}
+      {isChatOpen && (
+        <Modal2 onClose={() => setIsChatOpen(false)}>
+          <ChatWithDoc
+            text={text} // or subjectName or a file summary
+            initialPrompt="You are a helpful tutor. Explain the topic clearly and answer questions."
+            onClose={() => setIsChatOpen(false)}
+          />
+        </Modal2>
       )}
     </Wrapper>
   );

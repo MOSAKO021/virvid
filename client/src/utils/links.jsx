@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoBarChartSharp } from 'react-icons/io5';
 import { MdQueryStats } from 'react-icons/md';
-import { FaAcquisitionsIncorporated, FaAddressCard, FaFacebookMessenger, FaShieldAlt, FaBug, FaUserShield, FaWpforms } from 'react-icons/fa';
+import { FaRobot, FaAcquisitionsIncorporated, FaAddressCard, FaFacebookMessenger, FaShieldAlt, FaBug, FaUserShield, FaWpforms } from 'react-icons/fa';
 import { ImProfile } from 'react-icons/im';
 import { MdAdminPanelSettings, MdMessage } from 'react-icons/md';
 
@@ -36,15 +36,11 @@ const links = [
     path: 'admin', 
     icon: <MdAdminPanelSettings /> 
 },
+    
     {
-    text: 'report bugs',
-    path: 'issues',
-    icon: <FaBug />
-},
-    {
-    text: 'messages',
-    path: 'messages',
-    icon: <MdMessage/>,
+        text: 'ai chat',
+        path: 'chat',
+        icon: <FaRobot />
     }
   ];
   
