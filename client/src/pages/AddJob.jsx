@@ -33,11 +33,14 @@ const AddJob = () => {
 
       try {
         const response = await customFetch.get(`/tasks/result/${taskId}`);
+        console.log('summ dat: ', response.data.summary);
         if (response.status === 200 && response.data) {
           toast.success('Result is ready');
           setPolling(false);
           setIsLoadingSummary(false);
-          setSummarized(response.data.data.choices[0].message.content);
+          setSummarized(response.data.summary);
+          
+          
           setTextualData(response.data.pdf_text);
         } else if (response.status === 202) {
           console.log('Waiting for result...');
