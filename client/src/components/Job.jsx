@@ -52,7 +52,7 @@ const Job = ({
 
   const handleAttemptQuiz = async () => {
     try {
-      const response = await customFetch.post('/attempt-quiz', { _id });
+      const response = await customFetch.post('/quiz/attempt', { _id });
       console.log('Quiz attempt successful:', response.data);
     } catch (error) {
       console.error('Error attempting quiz:', error);
@@ -120,7 +120,7 @@ const Job = ({
 
       {/* Modal Viewer */}
       {modalType && (
-        <Modal onClose={() => setModalType(null)}>
+        <Modal2 onClose={() => setModalType(null)}>
           {modalType === 'video' && (
             <iframe
               src={`https://www.youtube.com/embed/${getYoutubeId(video)}`}
@@ -135,7 +135,7 @@ const Job = ({
               title="PDF File"
             />
           )}
-        </Modal>
+        </Modal2>
       )}
 
       {/* ✅ Chat Modal */}

@@ -1,0 +1,14 @@
+POST http://localhost:5200/api/v1/quiz/evaluate
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxZGU0MjQ5ZjVhOWY2MGZlOWQwOTkiLCJyb2xlIjoidXNlciIsInN0YW5kYXJkIjoxLCJpYXQiOjE3NTA3ODc2OTMsImV4cCI6MTc1MDg3NDA5M30.P3619hwjkoQvpe-InOZRKo2WV1YBsB8-05pHeg7z1Z8
+
+{
+  "quizId": "685b010c3922aab9652f65af",
+  "submittedAnswers": ["b", "c", "c", "a", "a"]
+}
+
+### "quizId": "685af8617bb47edacb238dcc"
+
+GET http://localhost:5200/api/v1/quiz/review/685b010c3922aab9652f65af
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQxZGU0MjQ5ZjVhOWY2MGZlOWQwOTkiLCJyb2xlIjoidXNlciIsInN0YW5kYXJkIjoxLCJpYXQiOjE3NTA3ODc2OTMsImV4cCI6MTc1MDg3NDA5M30.P3619hwjkoQvpe-InOZRKo2WV1YBsB8-05pHeg7z1Z8
