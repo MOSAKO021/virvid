@@ -7,7 +7,8 @@ import day from 'dayjs';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 import customFetch from '../components/customFetch';
 import Modal2 from './Modal2';
-import ChatWithDoc from './ChatWithDoc'; // ✅ Import Chat Component
+import ChatWithDoc from './ChatWithDoc';
+import QuizModal from './QuizModal'; // ✅ Quiz component
 
 day.extend(advancedFormat);
 
@@ -26,10 +27,26 @@ const Job = ({
 }) => {
   const [userName, setUserName] = useState('');
   const [modalType, setModalType] = useState(null);
-  const [isChatOpen, setIsChatOpen] = useState(false); // ✅ Chat Modal State
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [isQuizOpen, setIsQuizOpen] = useState(false);
+  const [quizStatus, setQuizStatus] = useState(null);
+  const [showScoreModal, setShowScoreModal] = useState(false);
+  const [isQuizSolved, setIsQuizSolved] = useState(false);
 
   const date = day(createdAt).format('MMM DD, YYYY');
+  const userRole = userData?.role;
 
+  const getYoutubeId = (url) => {
+    const regExp = /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([^\s&]+)/;
+    const match = url.match(regExp);
+    return match && match[1] ? match[1] : '';
+  };
+
+  const handleAttemptQuiz = () => {
+    setIsQuizOpen(true);
+  };
+
+  // ✅ Get teacher name
   useEffect(() => {
     const fetchUserName = async () => {
       try {
@@ -42,21 +59,38 @@ const Job = ({
     fetchUserName();
   }, [createdBy]);
 
-  const userRole = userData?.role;
+  // ✅ Check if quiz is solved using userData prop
+  useEffect(() => {
+    const solvedArray = userData?.solved || [];
+    const solved = solvedArray.some(entry =>
+      entry.contentId === _id || entry.contentId?._id === _id
+    );
+    console.log('Solved Array:', solvedArray);
+    console.log('Is Quiz Solved:', solved);    
+    setIsQuizSolved(solved);
+  }, [userData, _id]);
 
-  const getYoutubeId = (url) => {
-    const regExp = /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([^\s&]+)/;
-    const match = url.match(regExp);
-    return match && match[1] ? match[1] : '';
-  };
+  // ✅ Handle quiz evaluation
+  useEffect(() => {
+    const handleQuizEvaluated = (event) => {
+      const result = event.detail;
+      setQuizStatus(result);
+      if (result.correctAnswers === result.totalQuestions) {
+        setIsQuizSolved(true);
+        setShowScoreModal(false);
+      } else {
+        setShowScoreModal(true);
+      }
+    };
+    window.addEventListener('quizEvaluated', handleQuizEvaluated);
+    return () => window.removeEventListener('quizEvaluated', handleQuizEvaluated);
+  }, []);
 
-  const handleAttemptQuiz = async () => {
-    try {
-      const response = await customFetch.post('/quiz/attempt', { _id });
-      console.log('Quiz attempt successful:', response.data);
-    } catch (error) {
-      console.error('Error attempting quiz:', error);
-    }
+  const getScoreColor = (score) => {
+    if (score === 100) return 'green';
+    if (score >= 60) return 'goldenrod';
+    if (score >= 40) return 'orange';
+    return 'red';
   };
 
   return (
@@ -103,11 +137,20 @@ const Job = ({
               </Form>
             )}
 
-            {userRole === 'user' && (
+            {
+            userRole === 'user' && (
               <>
-                <button className="btn video-btn" onClick={handleAttemptQuiz}>
-                  Attempt Quiz
-                </button>
+                {isQuizSolved ? (
+                  <span style={{ color: 'green', fontWeight: 'bold' }}>Quiz Solved</span>
+                ) : (
+                  <button
+                    className="btn quiz-btn"
+                    onClick={handleAttemptQuiz}
+                    disabled={quizStatus?.correctAnswers === quizStatus?.totalQuestions}
+                  >
+                    Attempt Quiz
+                  </button>
+                )}
 
                 <button className="btn quiz-btn" onClick={() => setIsChatOpen(true)}>
                   Chat with Doc
@@ -118,7 +161,7 @@ const Job = ({
         )}
       </div>
 
-      {/* Modal Viewer */}
+      {/* PDF/Video Modal */}
       {modalType && (
         <Modal2 onClose={() => setModalType(null)}>
           {modalType === 'video' && (
@@ -138,14 +181,44 @@ const Job = ({
         </Modal2>
       )}
 
-      {/* ✅ Chat Modal */}
+      {/* Quiz Modal */}
+      {isQuizOpen && (
+        <Modal2 onClose={() => setIsQuizOpen(false)}>
+          <QuizModal jobId={_id} onClose={() => setIsQuizOpen(false)} />
+        </Modal2>
+      )}
+
+      {/* Chat Modal */}
       {isChatOpen && (
         <Modal2 onClose={() => setIsChatOpen(false)}>
           <ChatWithDoc
-            text={text} // or subjectName or a file summary
+            text={text}
             initialPrompt="You are a helpful tutor. Explain the topic clearly and answer questions."
             onClose={() => setIsChatOpen(false)}
           />
+        </Modal2>
+      )}
+
+      {/* Score Modal */}
+      {showScoreModal && quizStatus && (
+        <Modal2 onClose={() => setShowScoreModal(false)}>
+          <div style={{ textAlign: 'center' }}>
+            <h3>Your Score</h3>
+            <p style={{
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
+              color: getScoreColor(quizStatus.scorePercentage)
+            }}>
+              {quizStatus.scorePercentage}%
+            </p>
+            <p>You got {quizStatus.correctAnswers} out of {quizStatus.totalQuestions} correct.</p>
+            <button className="btn" onClick={() => {
+              setShowScoreModal(false);
+              setIsQuizOpen(true);
+            }}>
+              Reattempt Quiz
+            </button>
+          </div>
         </Modal2>
       )}
     </Wrapper>

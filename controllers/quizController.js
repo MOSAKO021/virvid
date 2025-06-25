@@ -88,8 +88,14 @@ export default generateQuiz ;
 const evaluateQuiz = async (req, res) => {
   const { quizId, submittedAnswers } = req.body;
   const User = await UserModel.findById(req.user.userId);
+  // console.log("id:", quizId, "answers:", submittedAnswers, "user:", User._id);
+  // console.log("quizes:", (await QuizSchema.find()).map((q) => q._id.toString()));
+  
+  
   try {
-    const quiz = await QuizSchema.findById(quizId);
+    const quiz = await QuizSchema.findOne({_id:quizId});
+    console.log("quiz:", quiz);
+    
     if (!quiz) {
       return res.status(404).json({ error: 'Quiz not found' });
     }

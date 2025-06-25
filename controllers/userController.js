@@ -5,6 +5,8 @@ import { hashPassword } from "../utils/passwordUtils.js";
 
 export const getCurrentUser = async (req, res, id) => {
     id = req.user.userId
+    // console.log("getCurrentUser called with id:", id);
+    
     const user = await User.findOne({_id:id})
     const userWithoutPassword = user.toJSON()
     res.status(StatusCodes.OK).json({user: userWithoutPassword})
