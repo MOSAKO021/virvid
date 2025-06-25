@@ -22,7 +22,7 @@ const OpenChat = () => {
 
 
   const sendMessage = async () => {
-    setShouldScroll(false);
+    setShouldScroll(false );
 
     if (!input.trim()) return;
 
