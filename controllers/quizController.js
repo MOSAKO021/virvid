@@ -4,7 +4,8 @@ import UserModel from '../models/UserModel.js';
 
 const generateQuiz = async (req,res) => {
   const { _id } = req.body;
-  const check = await QuizSchema.findOne({ jobId: _id });
+  const { userId } = req.user;
+  const check = await QuizSchema.findOne({ jobId: _id, createdBy: userId });
   if(check){
     return res.json({ questions: check.questions, quizId: check._id });
   }
@@ -67,6 +68,7 @@ Here is the input text:
     const quiz =  new QuizSchema({
       jobId: job._id,
       title: `Quiz for ${job.topicName} - ${job.subjectName}`,
+      createdBy: userId,
       questions: raw.questions,
       answers: raw.answers
     });
@@ -137,6 +139,15 @@ const evaluateQuiz = async (req, res) => {
   }
 };
 
+const getMockQuiz = async (req, res) => {
+  const { quizId } = req.params;
+  const quizes = await QuizSchema.find({ jobId: quizId },{createdBy:0,__v:0,answeres:0});
+  if (!quizes || quizes.length === 0) {
+    return res.status(404).json({ error: 'No quizzes found for this content' });
+  }
+  return res.json(quizes);
+}
+
 const reviewQuiz = async (req, res) => {
   const { quizId } = req.params;
 
@@ -158,4 +169,4 @@ const reviewQuiz = async (req, res) => {
 };
 
 
-export { generateQuiz, evaluateQuiz ,reviewQuiz};
+export { generateQuiz, evaluateQuiz ,reviewQuiz, getMockQuiz };
