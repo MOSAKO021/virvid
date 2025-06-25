@@ -14,6 +14,7 @@ import taskRouter from './routes/taskRouter.js'
 import authRouter from './routes/authRouter.js'
 import userRouter from './routes/userRouter.js'
 import User from './models/UserModel.js';
+import quizRouter from './routes/quizRouter.js';
 
 import {dirname} from 'path'
 import { fileURLToPath } from 'url';
@@ -94,6 +95,7 @@ app.use('/api/v1/users', authenticateUser, userRouter)
 // app.use('/api/v1/tasks', taskRouter)
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/getTeacher', userRouter)
+app.use('/api/v1/quiz', authenticateUser, quizRouter)
 
 
 app.use(express.static(path.join(__dirname, '/client/dist')))
