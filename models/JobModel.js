@@ -23,6 +23,11 @@ const JobSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    quizes:{
+        type:Array,
+        default: [mongoose.Schema.Types.ObjectId],
+        ref: 'Quiz',
+    }
 }, { timestamps: true });
 
 

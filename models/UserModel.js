@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Mongoose } from "mongoose";
 
 const UserSchema = new mongoose.Schema({
     name: String,
@@ -12,9 +12,21 @@ const UserSchema = new mongoose.Schema({
     standard: {
         type: Number,
         default: 0
+    },
+    solved:{
+        type: Array,
+        default: [
+            {
+                contentId: {
+                    type:mongoose.Schema.Types.ObjectId,
+                    ref: 'content'
+                },
+                score: Number,
+            }
+        ]
     }
 
 })
 
 
-export default mongoose.model('useras', UserSchema);
+export default mongoose.model('users', UserSchema);

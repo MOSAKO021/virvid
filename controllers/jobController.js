@@ -60,6 +60,7 @@ export const textualDatas = async (req, res) => {
             createdBy,
             verified
         })
+        
         await job.save();
         req.body.identifier = job._id;
         const job2 = await fileups(req, res);
@@ -67,9 +68,11 @@ export const textualDatas = async (req, res) => {
         const file = 'http://localhost:5200/' + temp_file.replace(/\s/g, '%20');
         const response = await fetch(file);
         const pdfData = await response.arrayBuffer();
+
         const loadingTask = pdfjsLib.getDocument({ data: pdfData });
         const pdf = await loadingTask.promise;
         let fullText = '';
+        
         for (let i = 1; i <= pdf.numPages; i++) {
             const page = await pdf.getPage(i);
             const content = await page.getTextContent();
