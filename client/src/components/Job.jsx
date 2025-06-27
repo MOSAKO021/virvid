@@ -8,7 +8,8 @@ import advancedFormat from 'dayjs/plugin/advancedFormat';
 import customFetch from '../components/customFetch';
 import Modal2 from './Modal2';
 import ChatWithDoc from './ChatWithDoc';
-import QuizModal from './QuizModal'; // ✅ Quiz component
+import QuizModal from './QuizModal';
+import ReviewModal from './ReviewModal';
 
 day.extend(advancedFormat);
 
@@ -32,6 +33,9 @@ const Job = ({
   const [quizStatus, setQuizStatus] = useState(null);
   const [showScoreModal, setShowScoreModal] = useState(false);
   const [isQuizSolved, setIsQuizSolved] = useState(false);
+  const [reviewData, setReviewData] = useState(null);
+  const [userAnswers, setUserAnswers] = useState([]);
+  const [isReviewOpen, setIsReviewOpen] = useState(false);
 
   const date = day(createdAt).format('MMM DD, YYYY');
   const userRole = userData?.role;
@@ -46,7 +50,6 @@ const Job = ({
     setIsQuizOpen(true);
   };
 
-  // ✅ Get teacher name
   useEffect(() => {
     const fetchUserName = async () => {
       try {
@@ -59,32 +62,39 @@ const Job = ({
     fetchUserName();
   }, [createdBy]);
 
-  // ✅ Check if quiz is solved using userData prop
   useEffect(() => {
     const solvedArray = userData?.solved || [];
     const solved = solvedArray.some(entry =>
       entry.contentId === _id || entry.contentId?._id === _id
     );
-    console.log('Solved Array:', solvedArray);
-    console.log('Is Quiz Solved:', solved);    
     setIsQuizSolved(solved);
   }, [userData, _id]);
 
-  // ✅ Handle quiz evaluation
   useEffect(() => {
     const handleQuizEvaluated = (event) => {
       const result = event.detail;
       setQuizStatus(result);
+      setUserAnswers(result.userAnswers); // ✅ store user answers
+      setShowScoreModal(true);
       if (result.correctAnswers === result.totalQuestions) {
         setIsQuizSolved(true);
-        setShowScoreModal(false);
-      } else {
-        setShowScoreModal(true);
       }
     };
     window.addEventListener('quizEvaluated', handleQuizEvaluated);
     return () => window.removeEventListener('quizEvaluated', handleQuizEvaluated);
   }, []);
+
+
+  const handleReview = async () => {
+    try {
+      const res = await customFetch.get(`/quiz/review/${quizStatus.quizId}`);
+      setReviewData(res.data);
+      setShowScoreModal(false);
+      setIsReviewOpen(true);
+    } catch (err) {
+      console.error('Quiz review failed', err);
+    }
+  };
 
   const getScoreColor = (score) => {
     if (score === 100) return 'green';
@@ -123,33 +133,22 @@ const Job = ({
           <footer className="actions">
             {userRole === 'legend' && (
               <Form method="post" action={`../edit-job/${_id}`}>
-                <button type="submit" className="btn edit-btn">
-                  Verify
-                </button>
+                <button type="submit" className="btn edit-btn">Verify</button>
               </Form>
             )}
 
             {userRole !== 'user' && (
               <Form method="post" action={`../delete-job/${_id}`}>
-                <button type="submit" className="btn delete-btn">
-                  Delete
-                </button>
+                <button type="submit" className="btn delete-btn">Delete</button>
               </Form>
             )}
 
-            {
-            userRole === 'user' && (
+            {userRole === 'user' && (
               <>
                 {isQuizSolved ? (
                   <span style={{ color: 'green', fontWeight: 'bold' }}>Quiz Solved</span>
                 ) : (
-                  <button
-                    className="btn quiz-btn"
-                    onClick={handleAttemptQuiz}
-                    disabled={quizStatus?.correctAnswers === quizStatus?.totalQuestions}
-                  >
-                    Attempt Quiz
-                  </button>
+                  <button className="btn quiz-btn" onClick={handleAttemptQuiz}>Attempt Quiz</button>
                 )}
 
                 <button className="btn quiz-btn" onClick={() => setIsChatOpen(true)}>
@@ -161,34 +160,27 @@ const Job = ({
         )}
       </div>
 
-      {/* PDF/Video Modal */}
       {modalType && (
         <Modal2 onClose={() => setModalType(null)}>
-          {modalType === 'video' && (
+          {modalType === 'video' ? (
             <iframe
               src={`https://www.youtube.com/embed/${getYoutubeId(video)}`}
               title="YouTube Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
-          )}
-          {modalType === 'pdf' && (
-            <iframe
-              src={`http://localhost:5200/${file}`}
-              title="PDF File"
-            />
+          ) : (
+            <iframe src={`http://localhost:5200/${file}`} title="PDF File" />
           )}
         </Modal2>
       )}
 
-      {/* Quiz Modal */}
       {isQuizOpen && (
         <Modal2 onClose={() => setIsQuizOpen(false)}>
           <QuizModal jobId={_id} onClose={() => setIsQuizOpen(false)} />
         </Modal2>
       )}
 
-      {/* Chat Modal */}
       {isChatOpen && (
         <Modal2 onClose={() => setIsChatOpen(false)}>
           <ChatWithDoc
@@ -199,26 +191,91 @@ const Job = ({
         </Modal2>
       )}
 
-      {/* Score Modal */}
       {showScoreModal && quizStatus && (
         <Modal2 onClose={() => setShowScoreModal(false)}>
-          <div style={{ textAlign: 'center' }}>
-            <h3>Your Score</h3>
-            <p style={{
-              fontSize: '1.5rem',
-              fontWeight: 'bold',
-              color: getScoreColor(quizStatus.scorePercentage)
-            }}>
+          <div
+            style={{
+              textAlign: 'center',
+              padding: '2rem',
+              maxWidth: '500px',
+              margin: '0 auto',
+            }}
+          >
+            <h2 style={{ marginBottom: '1rem', fontSize: '1.8rem' }}>🎯 Your Score</h2>
+
+            <p
+              style={{
+                fontSize: '2.5rem',
+                fontWeight: '700',
+                color: getScoreColor(quizStatus.scorePercentage),
+                margin: '0.5rem 0',
+              }}
+            >
               {quizStatus.scorePercentage}%
             </p>
-            <p>You got {quizStatus.correctAnswers} out of {quizStatus.totalQuestions} correct.</p>
-            <button className="btn" onClick={() => {
-              setShowScoreModal(false);
-              setIsQuizOpen(true);
-            }}>
-              Reattempt Quiz
-            </button>
+
+            <p style={{ fontSize: '1.1rem', color: '#555' }}>
+              You got <strong>{quizStatus.correctAnswers}</strong> out of{' '}
+              <strong>{quizStatus.totalQuestions}</strong> correct.
+            </p>
+
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                gap: '1rem',
+                marginTop: '2rem',
+              }}
+            >
+              <button
+                className="btn"
+                style={{ padding: '0.5rem 1.5rem' }}
+                onClick={() => setShowScoreModal(false)}
+              >
+                Okay
+              </button>
+
+              {quizStatus.scorePercentage < 100 && (
+                <button
+                  className="btn"
+                  style={{
+                    padding: '0.5rem 1.5rem',
+                    backgroundColor: '#007BFF',
+                    color: '#fff',
+                    border: 'none',
+                  }}
+                  onClick={async () => {
+                    try {
+                      const res = await customFetch.get(`/quiz/review/${quizStatus.quizId}`);
+                      setReviewData({
+                        ...res.data,
+                        userAnswers: quizStatus.userAnswers, // Pass user answers from event
+                      });
+                      setShowScoreModal(false);
+                    } catch (error) {
+                      console.error("Review fetch failed:", error);
+                    }
+                  }}
+                >
+                  Review Answers
+                </button>
+              )}
+            </div>
           </div>
+        </Modal2>
+      )}
+
+
+      {reviewData && (
+        <Modal2 onClose={() => setReviewData(null)}>
+          <ReviewModal reviewData={reviewData} onClose={() => setReviewData(null)} />
+        </Modal2>
+      )}
+
+
+      {isReviewOpen && reviewData && (
+        <Modal2 onClose={() => setIsReviewOpen(false)}>
+          <ReviewModal reviewData={reviewData} onClose={() => setIsReviewOpen(false)} />
         </Modal2>
       )}
     </Wrapper>

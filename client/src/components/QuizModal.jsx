@@ -1,10 +1,8 @@
-// src/components/QuizModal.jsx
-
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import customFetch from '../components/customFetch';
 
 const LoadingDots = () => (
-  <div className="ellipsis-loader">Loading<span>.</span><span>.</span><span>.</span></div>
+  <div className="ellipsis-loader"><span>.</span><span>.</span><span>.</span></div>
 );
 
 const QuizModal = ({ jobId, onClose }) => {
@@ -14,8 +12,13 @@ const QuizModal = ({ jobId, onClose }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
 
+  const hasFetchedRef = useRef(false); // ✅ used to prevent duplicate fetch
+
   useEffect(() => {
     const fetchQuiz = async () => {
+      if (hasFetchedRef.current) return; // ✅ prevent duplicate request
+      hasFetchedRef.current = true;
+
       try {
         const response = await customFetch.post('/quiz/attempt', { _id: jobId });
         setQuestions(response.data.questions);
@@ -27,6 +30,7 @@ const QuizModal = ({ jobId, onClose }) => {
         setLoading(false);
       }
     };
+
     fetchQuiz();
   }, [jobId]);
 
@@ -45,20 +49,32 @@ const QuizModal = ({ jobId, onClose }) => {
     }
   };
 
+  const handleBack = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
   const handleSubmit = async () => {
     if (selectedAnswers.includes(null)) {
       return alert('Please answer all questions before submitting.');
     }
+
     try {
       const response = await customFetch.post('/quiz/evaluate', {
         quizId,
         submittedAnswers: selectedAnswers,
       });
 
-      onClose(); // Close quiz modal
-      // Dispatch quiz evaluation result
+      onClose();
+
       window.dispatchEvent(
-        new CustomEvent('quizEvaluated', { detail: response.data })
+        new CustomEvent('quizEvaluated', {
+          detail: {
+            ...response.data,
+            userAnswers: selectedAnswers, // ✅ include user answers
+          }
+        })
       );
     } catch (error) {
       console.error('Error submitting quiz:', error);
@@ -71,9 +87,9 @@ const QuizModal = ({ jobId, onClose }) => {
   const currentQ = questions[currentIndex];
 
   return (
-    <div className="quiz-modal">
+    <div className="quiz-modal" style={{ padding: '1rem' }}>
       <h3>Question {currentIndex + 1} of {questions.length}</h3>
-      <p>{currentQ.question}</p>
+      <p style={{ marginBottom: '1rem' }}>{currentQ.question}</p>
 
       <form>
         {currentQ.options.map((option, idx) => (
@@ -81,7 +97,7 @@ const QuizModal = ({ jobId, onClose }) => {
             <input
               type="radio"
               name={`q-${currentIndex}`}
-              value={option[0].toLowerCase()} // 'a', 'b', etc.
+              value={option[0].toLowerCase()}
               checked={selectedAnswers[currentIndex] === option[0].toLowerCase()}
               onChange={handleOptionChange}
             />
@@ -90,11 +106,15 @@ const QuizModal = ({ jobId, onClose }) => {
         ))}
       </form>
 
-      <div style={{ marginTop: '1rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '2rem' }}>
+        {currentIndex > 0 ? (
+          <button className="btn" onClick={handleBack}>Back</button>
+        ) : <div />}
+
         {currentIndex < questions.length - 1 ? (
-          <button className="btn" onClick={handleSave}>Save</button>
+          <button className="btn" style={{ marginLeft: 'auto' }} onClick={handleSave}>Save</button>
         ) : (
-          <button className="btn" onClick={handleSubmit}>Submit</button>
+          <button className="btn" style={{ marginLeft: 'auto' }} onClick={handleSubmit}>Submit</button>
         )}
       </div>
     </div>

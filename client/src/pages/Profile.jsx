@@ -9,9 +9,17 @@ import { FormRow, SubmitBtn } from '../components';
 // Form action handler
 export const action = async ({ request }) => {
   const formData = await request.formData();
-  const dat = Object.fromEntries(formData);
+  const password = formData.get('password');
+  const confirmPassword = formData.get('confirmPassword');
+
+  // ✅ Password match validation
+  if (password !== confirmPassword) {
+    toast.error('Passwords do not match');
+    return null;
+  }
+
   try {
-    await customFetch.patch('/users/update-user', dat);
+    await customFetch.patch('/users/update-user', { password });
     toast.success('Password updated successfully');
     return redirect('/dashboard');
   } catch (error) {
@@ -51,6 +59,13 @@ const Profile = () => {
               id="password"
               name="password"
               labelText="New Password"
+              required
+            />
+            <FormRow
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              labelText="Re-enter Password"
               required
             />
             <SubmitBtn formBtn />

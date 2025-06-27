@@ -5,10 +5,10 @@ import UserModel from '../models/UserModel.js';
 const generateQuiz = async (req,res) => {
   const { _id } = req.body;
   const { userId } = req.user;
-  const check = await QuizSchema.findOne({ jobId: _id, createdBy: userId });
-  if(check){
-    return res.json({ questions: check.questions, quizId: check._id });
-  }
+  // const check = await QuizSchema.findOne({ jobId: _id, createdBy: userId });
+  // if(check){
+  //   return res.json({ questions: check.questions, quizId: check._id });
+  // }
   const job = await JobSchema.findById(_id);
 
   if (!job) {
@@ -45,7 +45,7 @@ Here is the input text:
   `;
 
   try {
-    const response = await fetch('http:localhost:5200/api/v1/chat', {
+    const response = await fetch('http://localhost:5200/api/v1/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -64,6 +64,8 @@ Here is the input text:
         .replace(/^```json\n?/, '')
         .replace(/```$/, '')
         .trim();
+    console.log('AI Raw:', data);
+    
     raw = JSON.parse(raw);
     const quiz =  new QuizSchema({
       jobId: job._id,
@@ -75,12 +77,13 @@ Here is the input text:
     quiz.save();
     job.quizes.push(quiz._id);
     job.save();
-
+    console.log('Quiz generated successfully:', quiz);
+    
     return res.json({ questions: quiz.questions, quizId: quiz._id });
 
   } catch (error) {
-    console.error('Moderation check failed:', error);
-    return res.json({ isClean: false, reason: 'AI moderation error' });
+    console.error('Error in Quiz generation', error);
+    return res.json({ isClean: false, reason: error.message });
   }
 };
 
@@ -150,6 +153,8 @@ const getMockQuiz = async (req, res) => {
 
 const reviewQuiz = async (req, res) => {
   const { quizId } = req.params;
+  console.log("Reviewing quiz with ID:", quizId);
+  
 
   try {
     const quiz = await QuizSchema.findById(quizId);
@@ -160,7 +165,8 @@ const reviewQuiz = async (req, res) => {
     return res.json({
       quizId: quiz._id,
       title: quiz.title,
-      questions: quiz.questions
+      questions: quiz.questions,
+      answers: quiz.answers,
     });
   } catch (error) {
     console.error('Error fetching quiz:', error);
