@@ -7,6 +7,7 @@ import day from 'dayjs';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 import customFetch from '../components/customFetch';
 import Modal2 from './Modal2';
+import Modal from './Modal';
 import ChatWithDoc from './ChatWithDoc';
 import QuizModal from './QuizModal';
 import ReviewModal from './ReviewModal';
@@ -161,7 +162,7 @@ const Job = ({
       </div>
 
       {modalType && (
-        <Modal2 onClose={() => setModalType(null)}>
+        <Modal   onClose={() => setModalType(null)}>
           {modalType === 'video' ? (
             <iframe
               src={`https://www.youtube.com/embed/${getYoutubeId(video)}`}
@@ -172,7 +173,7 @@ const Job = ({
           ) : (
             <iframe src={`http://localhost:5200/${file}`} title="PDF File" />
           )}
-        </Modal2>
+        </Modal>
       )}
 
       {isQuizOpen && (
