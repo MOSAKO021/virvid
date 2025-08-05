@@ -642,7 +642,7 @@ const JobDetail = () => {
       {isChatOpen && (
         <Modal2 onClose={() => setIsChatOpen(false)}>
           <ChatWithDoc
-            text={jobData.text}
+            text={jobData.summary}
             initialPrompt="You are a helpful tutor. Explain the topic clearly and answer questions."
             onClose={() => setIsChatOpen(false)}
           />

@@ -23,7 +23,7 @@ If the content is completely clean and appropriate, respond with exactly: true
 If the content is inappropriate, respond with a very short reason like: "offensive language" or "contains sexual content". No extra explanation.
 
 Text:
-"""${job.text}"""
+"""${job.summary}"""
   `;
 
   const quizStructure = `
@@ -41,7 +41,7 @@ Each question must have:
 ⚠️ Return the result as raw JSON only — no markdown, no explanation, no formatting, no code block.
 
 Here is the input text:
-"""${job.text}"""
+"""${job.summary}"""
   `;
 
   try {

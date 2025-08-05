@@ -15,7 +15,7 @@ const JobSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
     },
-    text:{
+    summary:{
         type: String,
         default: "",
     },

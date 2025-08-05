@@ -80,7 +80,7 @@ export const addJob = async (req, res) => {
             await Job.findByIdAndDelete(job2._id); 
             return res.status(400).json({ msg: `Content rejected: ${moderationResult.reason}` });
         }
-        job2.text = fullText;
+        job2.summary = fullText;
         job2.verified = true;
         await job2.save();
         res.status(201).json(job2);
